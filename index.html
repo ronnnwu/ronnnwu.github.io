@@ -81,14 +81,15 @@
 			<h2>Finance</h2>
 			<em>Algorithmic Trading, Paper-Money Trading, Computational Finance</em>
 			<p text-align: center >
-				<iframe src="proj/finance/unemply.html" height="200" width="100% !important;"  scrolling="no" seamless="seamless" frameBorder="0">
+				<iframe src="proj/finance/unemply.html" height="250" width="100% !important;"  scrolling="no" seamless="seamless" frameBorder="0">
 				</iframe>
 			</p>
 			
 <pre><code data-language="r">library(plotly)
-p <- plot_ly(economics, x = date, y = uempmed, name = "unemployment") %>% 
-	add_trace(y = fitted(loess(uempmed ~ as.numeric(date))), x = date) %>% 
-	layout(title="unemployment rate")
+p <- plot_ly(economics, x = date, y = 100*unemploy / pop, name = "unemply rate") %>% 
+      add_trace(y = fitted(loess(100*unemploy / pop ~ as.numeric(date))),
+                x = date, name="trend") %>%
+      layout(title="Unemployment")
 config(p, displayModeBar=FALSE)</code></pre>
 
 				<p>

@@ -30,21 +30,20 @@ jQuery(document).ready(function(){
 
 			this.firstChild.data="Browse Notes";
 			
+			this.href="note/index.html";
+
 			this.classList.remove("cd-btn1");
 			this.classList.add("cd-btn2");
 			
-			this.href="note/index.html";
 		}
 		else{
 			event.preventDefault();
+
 			this.firstChild.data="Show project";
-			
 			this.classList.remove("cd-btn2");
 			this.classList.add("cd-btn1");
-			
 			this.href="#0";
-			
-			window.location = 'note/index.html';
+			window.location = 'note/index.html'
 		}
 	});
 
