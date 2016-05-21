@@ -265,14 +265,14 @@ Projects Slider
   font-size: 1.4rem;
   opacity: .6;
   padding: .4em 0;
-  /* truncate text with ellipsis if too long */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .cd-slider h2, .cd-slider p {
   line-height: 1.2;
   color: #0f1926;
+  /* truncate text with ellipsis if too long */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 900px) {
   .cd-slider {
