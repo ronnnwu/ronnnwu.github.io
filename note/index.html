@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<!--template from http://codepen.io/thelifenadine/pen/rammwv -->
+  <head>
+    <meta charset="UTF-8">
+    <title>My Library</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+  <div ng-app='angularDemo' ng-cloak>
+    <div id="main" class="m-scene">
+   <div class="scene_element scene_element--fadein">
+      <a href="javascript:history.go(-1)">
+     <md-toolbar style="min-height:2px; background-color: #e7e7e7">    
+     <center><img src="img/cd-arrow-back.svg"  title="BACK"/>
+          </center>  
+
+          
+</md-toolbar></a>
+     <md-toolbar layout-padding style="background-color: #262f3b">   
+      <h2 id="header">Note Pool</h2>
+    </md-toolbar>
+    </div>
+    <div class="scene_element scene_element--fadeinup panel" layout="row" ng-controller="angularController as ctrl" >
+      <div flex="25" class="sidebar" layout-padding>
+        <div ng-repeat="filter in Filters">
+          <h3 class="sort">{{filter.name}}</h3>
+          <ul class="sortoptions">
+            <li ng-repeat="option in filter.options">
+              <input type="checkbox" ng-model="option.IsIncluded" ng-checked="option.IsIncluded"> {{option.value}}
+              <span>({{option.count}})</span>
+            </li>
+          </ul>
+        </div>
+        </br>
+        <md-button class="md-raised md-primary" style="background-color: #262f3b" ng-click="ctrl.toggleAll($event, false)">Reset</md-button>
+      </div>
+      <div layout-fill>
+          <div layout="row" layout-wrap  flex="33">
+            <md-card flex  ng-repeat="myfile in Fruits | dynamicFilter:Filters:this" class="product">
+            <a id="notecard" href=pdf/{{myfile.link}} target="_blank"> 
+              <span style="display: block; height:170px; ">
+                {{myfile.name}} 
+               <br>
+               <br>
+               <small>{{myfile.completeness}} </small>   
+              </span>
+            </a>
+            </md-card>          
+          </div>
+      </div>
+    </div>
+    </div>
+
+</div>
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js'></script>
+  <script src="js/note_lib.js"></script>
+  <script src="js/note_index.js"></script>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='js/jquery.smoothstate.js'></script>
+  <script src="js/index.js"></script>
+
+  </body>
+</html>
