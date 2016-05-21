@@ -209,8 +209,8 @@ body {
 /** Basic styles for an animated element */
 .m-scene .scene_element {
 
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 
@@ -238,16 +238,16 @@ body {
 }
 
 /** Reverse "exit" animations */
-/*.m-scene.is-exiting .scene_element {
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
-}*/
+
 .m-scene .scene_element--delayed {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s; }
 .m-scene.is-exiting .scene_element {
   -webkit-animation-direction: alternate-reverse;
-  animation-direction: alternate-reverse; }
+  animation-direction: alternate-reverse; 
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 /* line 43, /Users/mperez/Sites/smoothstate/source/stylesheets/pageTransitions.css.scss */
 .m-scene.is-exiting .scene_element--delayed {
   -webkit-animation-delay: 0s;

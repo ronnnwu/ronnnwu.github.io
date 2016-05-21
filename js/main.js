@@ -43,6 +43,7 @@ jQuery(document).ready(function(){
 			this.classList.add("cd-btn1");
 			
 			this.href="#0";
+			
 			window.location = 'note/index.html';
 		}
 	});

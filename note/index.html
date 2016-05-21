@@ -11,23 +11,23 @@
   </head>
 
   <body>
+ 
 
-  <div ng-app='angularDemo' ng-cloak>
-    <div id="main" class="m-scene">
-   <div class="scene_element scene_element--fadein">
+  <div ng-app='angularDemo' ng-cloak id="main" class="m-scene">
+  
+    <div class="scene_element scene_element--fadein">
       <a href="javascript:history.go(-1)">
-     <md-toolbar style="min-height:2px; background-color: #e7e7e7">    
-     <center><img src="img/cd-arrow-back.svg"  title="BACK"/>
-          </center>  
-
-          
-</md-toolbar></a>
-     <md-toolbar layout-padding style="background-color: #262f3b">   
-      <h2 id="header">Note Pool</h2>
-    </md-toolbar>
+        <md-toolbar style="min-height:2px; background-color: #e7e7e7">    
+           <center><img src="img/cd-arrow-back.svg"  title="BACK"/></center>
+        </md-toolbar>
+      </a>
+      <md-toolbar layout-padding style="background-color: #262f3b">   
+        <h2 id="header">Note Pool</h2>
+      </md-toolbar >
     </div>
-    <div class="scene_element scene_element--fadeinup panel" layout="row" ng-controller="angularController as ctrl" >
-      <div flex="25" class="sidebar" layout-padding>
+
+    <div class="scene_element scene_element--fadeinup panel"  ng-controller="angularController as ctrl" layout="row" layout-xs="column">
+      <div class="sidebar" flex="22" layout-padding >
         <div ng-repeat="filter in Filters">
           <h3 class="sort">{{filter.name}}</h3>
           <ul class="sortoptions">
@@ -40,24 +40,26 @@
         </br>
         <md-button class="md-raised md-primary" style="background-color: #262f3b" ng-click="ctrl.toggleAll($event, false)">Reset</md-button>
       </div>
-      <div layout-fill>
-          <div layout="row" layout-wrap  flex="33">
-            <md-card flex  ng-repeat="myfile in Fruits | dynamicFilter:Filters:this" class="product">
-            <a id="notecard" href=pdf/{{myfile.link}} target="_blank"> 
-              <span style="display: block; height:170px; ">
-                {{myfile.name}} 
-               <br>
-               <br>
-               <small>{{myfile.completeness}} </small>   
-              </span>
-            </a>
-            </md-card>          
+      <div flex>
+          <div layout="raw" layout-wrap>
+            
+              <md-card ng-repeat="myfile in Fruits | dynamicFilter:Filters:this" class="product">
+              <a id="notecard" href=pdf/{{myfile.link}} target="_blank"> 
+                <span style="display: block; height:170px; ">
+                  {{myfile.name}} 
+                 <br>
+                 <br>
+                 <small>{{myfile.completeness}} </small>   
+                </span>
+              </a>
+              </md-card>        
+        
           </div>
       </div>
     </div>
-    </div>
+  </div>
 
-</div>
+
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js'></script>
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
