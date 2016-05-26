@@ -31,7 +31,7 @@
 		<ul class="cd-slider">
 			<li class="current">
 				<a href="#project-1">
-					<img src="img/img.png" alt="project image">
+					<img src="img/pj1.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Finance</h2>
 						<p>Algorithmic Trading, Paper-Money Trading, Computational Finance</p>
@@ -41,7 +41,7 @@
 
 			<li>
 				<a href="#project-2">
-					<img src="img/img.png" alt="project image">
+					<img src="img/pj2.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Machine Learning</h2>
 						<p>Business Analytics, Big Data, Computer Vision, Natural Language Processing</p>
@@ -51,7 +51,7 @@
 
 			<li>
 				<a href="#project-3">
-					<img src="img/img.png" alt="project image">
+					<img src="img/pj3.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Numerical Methods</h2>
 						<p>Signal Processing, Fluid Dynamics, Computational Plasma &amp; Nuclear Physics</p>
@@ -61,7 +61,7 @@
 
 			<li>
 				<a href="#project-4">
-					<img src="img/img.png" alt="project image">
+					<img src="img/pj4.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Web/App Design</h2>
 						<p>Front-End &amp; Back-End Designs, App for Android &amp; Windows Phone</p>
@@ -70,16 +70,65 @@
 			</li>
 		</ul>
 
-		<ul class="cd-slider-navigation cd-img-replace">
-			<li><a href="#0" class="prev inactive">Prev</a></li>
-			<li><a href="#0" class="next">Next</a></li>
+		<ul class="cd-slider-navigation">
+			<li><a href="#0" class="prev inactive"></a></li>
+			<li><a href="#0" class="next"></a></li>
 		</ul> <!-- .cd-slider-navigation -->
 	</div> <!-- .cd-projects-wrapper -->
 
 	<div class="cd-project-content" id="project-1">
+
 		<div>
 			<h2>Finance</h2>
-			<em>Algorithmic Trading, Paper-Money Trading, Computational Finance</em>
+			<em>1. Algorithmic Trading</em>
+			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebelances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, which signifies that mean-reversion algorithm does pariticularly well during market downtime, and has low beta and low volatility.
+			</p>
+<p text-align: center >
+				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;"  seamless="seamless" frameBorder="0">
+				</iframe>
+			</p>
+<pre><code data-language="python">#liquid securities 
+low_returns = recent_returns.percentile_between(0,10,mask=high_dollar_volume)
+high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
+
+#For each security in the universe, order long or short positions with equal weights
+    if data.can_trade(stock):
+        if stock in context.long_secs.index:
+            order_target_percent(stock, context.long_weight)
+        elif stock in context.short_secs.index:
+            order_target_percent(stock, context.short_weight)
+</code></pre>
+			
+
+			<p>Return-to-Mean algorithm relies on the assumption that the market is super efficient; that is all fundamental and risk factors are already spelled out in the price, hence return is nothing but a random variable. On the other hand, an opposite thought, momentums, believes that market is a mixture of sensitments and it is operated by irretional human beings: higher high and lower low.</p>
+
+
+			<p>Despite that we all conveniently agree that "the simpler, the better", we are dying to do a little better; I have learned many advanced techniques and tried to incorporate them into the simple mean-reversion and momemtum algo: (check them out in my other projects categories.)</p>
+
+			<P>&#9658 Mechine Learning: <a href="https://psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp categorization (supervised/unsupervised learning).</P>
+
+			<p>&#9658 Numerical Method: modern portfolio theory, dynamic mode decomposition (PCA), random matrix theory.
+			</p>
+
+			<p>&#9658 Web/App design: experienced using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for porfolio manager and traders to automate their works.</p>
+
+
+			<em>2. Paper-Money Option Trading</em>
+			<p>	While learning portfolio theory with a goal in meeting practice, I created trading algorithms; while learning derivatives, I traded paperMoney options from <a href="https://www.tdameritrade.com/">TD Ameritrade</a>. 
+			</p>
+			<p>
+				<img src="proj/finance/aapl.png">
+			</p>
+			<p>
+				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthlys at the money is traded at $1.76, expiring in 3 weeks' time.  One can also sell in the money call option to make a bull spread taking advantage of the low VIX environment.
+			</p>
+			<em>3. Computational Finance</em>
+			<p>
+				With deep understanding of numerical analysis(schemas, monto carlo, bootstrap), PDEs(stochastics, fourier), and probability(martingale, limiting theorem), I wrote computation algorthms to meet both accuracy and speed. 
+			</p>
+			<p>
+				I'm also familiar with many popular computational toolboxes and libraries. In the graph below, I used <a href="https://plot.ly/r/" target="_blank">Plotly</a> to make an interactive graph. 
+			</p>
 			<p text-align: center >
 				<iframe src="proj/finance/unemply.html" height="250" width="100% !important;"  scrolling="no" seamless="seamless" frameBorder="0">
 				</iframe>
@@ -92,8 +141,11 @@ p <- plot_ly(economics, x = date, y = 100*unemploy / pop, name = "unemply rate")
       layout(title="Unemployment")
 config(p, displayModeBar=FALSE)</code></pre>
 
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus. 
+				
+		
+	<em>4. My Course Notes</em>
+			<p>
+				<a href="note\pdf\finance\computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
 			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
@@ -139,6 +191,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 <script src="js/rainbow.min.js"></script>
 <script src="js/generic.js"></script>
 <script src="js/r.js"></script>
+<script src="js/python.js"></script>
 
 </body>
 </html>

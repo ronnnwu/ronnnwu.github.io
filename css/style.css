@@ -76,11 +76,12 @@ column-count: 2;
 } 
 
 .cd-img-replace {
-  /* replace text with image */
-  color: transparent;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
+  padding: 10px 25px;
+  background: #0099CC;
+  border: none;
+  font-size: .9em;
+  border-radius: 4px;
+  color: white;
 }
 
 /* -------------------------------- 
@@ -683,6 +684,9 @@ Project slider navigation
   }
 }
 
+
+
+
 /* -------------------------------- 
 
 Project content panel 
@@ -721,13 +725,34 @@ Project content panel
   height: 100%;
   display:block;
   overflow-y: auto;
-  padding: 4em 6em;
 }
 .cd-project-content > div > * {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
+
+.cd-project-content > div>p> a:link {
+      color: blue;
+      text-decoration: none;
+  }
+
+.cd-project-content > div>p> a:visited {
+      color: blue;
+      text-decoration: none;
+  }
+
+.cd-project-content > div>p> a:hover {
+      text-decoration: underline;
+  }
+
+.cd-project-content > div>p> a:active {
+      text-decoration: underline;
+  }
+
+
+
+
 .cd-project-content.is-visible {
   visibility: visible;
   -webkit-transform: translateY(0);
@@ -749,12 +774,12 @@ Project content panel
 .cd-project-content h2 {
   font-size: 2.4rem;
   font-weight: bold;
+  margin: 0.5em auto;
 }
 .cd-project-content em {
   display: block;
-  font-size: 1.8rem;
-  font-style: italic;
-  margin: 1em auto;
+  font-size: 2rem;
+  margin: 0.5em auto;
 }
 .cd-project-content p {
   margin-bottom: 1em;
@@ -764,15 +789,17 @@ Project content panel
 .cd-project-content em, .cd-project-content p {
   line-height: 1.6;
 }
+.cd-project-content pre{
+  line-height: 1.2;
+}
 .cd-project-content .close {
   display: block;
-  height: 32px;
-  width: 32px;
   position: absolute;
   top: 10px;
   right: 10px;
-  background: url(../img/cd-close-dark.svg) no-repeat center center;
+
 }
+
 @media only screen and (min-width: 900px) {
   .cd-project-content h2 {
     font-size: 6rem;
@@ -787,8 +814,22 @@ Project content panel
     top: 30px;
     right: 5%;
   }
+.cd-project-content > div {
+  padding: 3em 6em;
+  }
 }
 
+@media only screen and (max-width: 900px) and (min-width: 550px) {
+.cd-project-content > div {
+  padding: 3em 4em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+.cd-project-content > div {
+  padding: 2em 3em;
+  }
+}
 /* -------------------------------- 
 
 Keyframes
@@ -814,6 +855,8 @@ Keyframes
     opacity: 1;
   }
 }
+
+
 @keyframes cd-translate {
   0% {
     opacity: 0;
