@@ -64,7 +64,7 @@
 					<img src="img/pj4.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Web/App Design</h2>
-						<p>Front-End &amp; Back-End Designs, App for Android &amp; Windows Phone</p>
+						<p>Gaming, Front-End &amp; Back-End Designs, App for Android &amp; Windows Phone</p>
 					</div>
 				</a>
 			</li>
@@ -83,10 +83,11 @@
 			<em>1. Algorithmic Trading</em>
 			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebelances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, which signifies that mean-reversion algorithm does pariticularly well during market downtime, and has low beta and low volatility.
 			</p>
-<p text-align: center >
-				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;"  seamless="seamless" frameBorder="0">
+			<p text-align: center >
+				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
 				</iframe>
 			</p>
+
 <pre><code data-language="python">#liquid securities 
 low_returns = recent_returns.percentile_between(0,10,mask=high_dollar_volume)
 high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
@@ -100,7 +101,7 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
 </code></pre>
 			
 
-			<p>Return-to-Mean algorithm relies on the assumption that the market is super efficient; that is all fundamental and risk factors are already spelled out in the price, hence return is nothing but a random variable. On the other hand, an opposite thought, momentums, believes that market is a mixture of sensitments and it is operated by irretional human beings: higher high and lower low.</p>
+			<p>Return-to-Mean algorithm relies on the assumption that the market is super efficient; that is all fundamentals and risks are already spelled out in the price, hence returns are nothing but random. On the other hand, an opposite thought, momentums, believes that market is a mixture of sensitments and it is operated by irretional human beings: higher high and lower low.</p>
 
 
 			<p>Despite that we all conveniently agree that "the simpler, the better", we are dying to do a little better; I have learned many advanced techniques and tried to incorporate them into the simple mean-reversion and momemtum algo: (check them out in my other projects categories.)</p>
@@ -140,10 +141,9 @@ p <- plot_ly(economics, x = date, y = 100*unemploy / pop, name = "unemply rate")
                 x = date, name="trend") %>%
       layout(title="Unemployment")
 config(p, displayModeBar=FALSE)</code></pre>
-
 				
 		
-	<em>4. My Course Notes</em>
+			<em>4. My Courses Note</em>
 			<p>
 				<a href="note\pdf\finance\computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
 			</p>
@@ -154,10 +154,15 @@ config(p, displayModeBar=FALSE)</code></pre>
 	<div class="cd-project-content" id="project-2">
 		<div>
 			<h2>Machine Learning</h2>
-			<em>Business Analytics, Big Data, Computer Vision, Natural Language Processing</em>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus. 
-			</p>
+
+			<em>1. Business Analytics</em>
+
+			<em>2. Big Data</em>
+			<em>3. Computer Vision</em>
+			<em>4. Natural Language Processing</em>
+			<em>5. Robot</em>
+			<em>6. My Courses Note</em>
+
 		</div>
 	<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
@@ -165,10 +170,12 @@ config(p, displayModeBar=FALSE)</code></pre>
 	<div class="cd-project-content" id="project-3">
 		<div>
 			<h2>Numerical Method</h2>
-			<em>Signal Processing, Fluid Dynamics, Computational Plasma &amp; Nuclear Physics</em>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus. 
-			</p>
+
+			<em>1. Signal Processing</em>
+			<em>2. Fluid Dynamics</em>
+			<em>3. Computational Plasma &amp; Nuclear Physics</em>
+			<em>4. My Courses Note</em>
+			
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
@@ -176,9 +183,14 @@ config(p, displayModeBar=FALSE)</code></pre>
 	<div class="cd-project-content" id="project-4">
 		<div>
 			<h2>Web/App Design</h2>
-			<em>Front-End &amp; Back-End Designs, App for Android &amp; Windows Phone</em>
+
+			<em>1. Gaming</em>
+			<em>2. Front-End Design</em>
+			<em>3. Back-End Design</em>
+			<em>4. App for Android &amp; Windows Phone</em>
+			<em>5. My Courses Note</em>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus. 
+				<a href="note\pdf\cs\dataStructure.pdf" target="_blank">ADT, OOP &amp Algorithm, Design Patterns, API testing, Software testing</a>
 			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
