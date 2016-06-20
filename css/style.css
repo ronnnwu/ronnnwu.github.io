@@ -3,8 +3,12 @@
 Primary style
 
 -------------------------------- */
-*, *::after, *::before {
+
+*, *:after, *:before {
   box-sizing: border-box;
+}
+
+* {margin:0;padding:0;border:0 none;position: relative; outline: none;
 }
 
 html {
@@ -19,8 +23,39 @@ body {
 }
 
 a {
-  color: #eebb00;
+  color: #ffffff;
   text-decoration: none;
+}
+
+
+h1 > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
+}
+
+a.bt1:before {
+  background: #eebb00;
+}
+
+a.bt2:before {
+  background: #3a913f;
+}
+
+
+h1 > a:hover:before,
+h1 > a:focus:before {
+
+  z-index:  1;
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 img {
@@ -32,41 +67,7 @@ img {
 Patterns - reusable parts of our design
 
 -------------------------------- */
-.cd-btn1, .cd-btn2 {
-  display: inline-block;
-  padding: 1.4em 2em;
-  border-radius: 50em;
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  -webkit-transition: box-shadow 0.2s;
-  -moz-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-}
 
-.cd-btn1{
-  background-color: #eebb00;
-  box-shadow: 0 1px 20px rgba(238, 187, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.cd-btn1:hover {
-  box-shadow: 0 1px 60px rgba(238, 187, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.cd-btn2{
-  background-color: #3a913f;
-  box-shadow: 0 1px 20px rgba(58, 145, 63, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.cd-btn2:hover {
-  box-shadow: 0 2px 60px rgba(58, 145, 63, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.cd-btn2 {
-
-}
 
 .two_col 
 {

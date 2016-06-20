@@ -20,7 +20,6 @@ jQuery(document).ready(function(){
 	//show the projects slider if user clicks the show-projects button
 	intro.on('click', 'a[data-action="show-projects"]', function(event) {
 
-		if (this.firstChild.data=="Show project"){
 			event.preventDefault();
 			intro.addClass('projects-visible');
 			projectsContainer.addClass('projects-visible');
@@ -28,23 +27,6 @@ jQuery(document).ready(function(){
 				showProjectPreview(projectsSlider.children('li').eq(0));
 			}, 200);
 
-			this.firstChild.data="Browse Notes";
-			
-			this.href="note/index.html";
-
-			this.classList.remove("cd-btn1");
-			this.classList.add("cd-btn2");
-			
-		}
-		else{
-			event.preventDefault();
-
-			this.firstChild.data="Show project";
-			this.classList.remove("cd-btn2");
-			this.classList.add("cd-btn1");
-			this.href="#0";
-			window.location = 'note/index.html'
-		}
 	});
 
 	intro.on('click', function(event) {
