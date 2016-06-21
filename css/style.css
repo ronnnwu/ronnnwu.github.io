@@ -209,7 +209,8 @@ Intro page
 .cd-intro-block h1 {
   width: 90%;
   margin: 0 auto .6em;
-  font-size: 2.4rem;
+  font-size: 4.4rem;
+  font-weight: 300;
   color: #ebebeb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -231,10 +232,6 @@ Intro page
 @media only screen and (min-width: 900px) {
   .cd-intro-block::after {
     top: 97.5%;
-  }
-  .cd-intro-block h1 {
-    font-size: 4.4rem;
-    font-weight: 300;
   }
   .cd-intro-block.projects-visible {
     -webkit-transform: translateY(-95%);
