@@ -82,7 +82,7 @@
 		<div>
 			<h2>Finance</h2>
 			<em>1. Algorithmic Trading</em>
-			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebelances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, and has low beta and low volatility.
+			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebelances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, and it had low beta and low volatility.
 			</p>
 			<p text-align: center >
 				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
@@ -99,34 +99,33 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
             order_target_percent(stock, context.long_weight)
         elif stock in context.short_secs.index:
             order_target_percent(stock, context.short_weight)
-</code></pre>
-		
+</code></pre>		
 
 
-			<p>I have learned many advanced techniques and tried to incorporate them into the simple mean-reversion and momemtum algorithm: </p>
+			<p>There are many advanced techniques out here that are often bestowed upon the simple mean-reversion and momemtum strategies: (check them out in my other project categories) </p>
 
-			<P>&#9658 Mechine Learning: <a href="https://psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp categorization (supervised/unsupervised learning).</P>
+			<P>&#9658; Mechine Learning: <a href="https://www.psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://www.alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp; categorization (supervised/unsupervised learning).</P>
 
-			<p>&#9658 Numerical Methods: modern portfolio theory, dynamic mode decomposition (PCA), random matrix theory.
+			<p>&#9658; Numerical Methods: modern portfolio theory, dynamic mode decomposition (PCA), random matrix theory.
 			</p>
 
-			<p>&#9658 Web/App design: experienced using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for porfolio manager and traders to automate their works.</p>
+			<p>&#9658; Web/App design: using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for porfolio manager and traders to automate their works.</p>
 
 
 			<em>2. Paper-Money Option Trading</em>
-			<p>	While learning portfolio theory with a goal in meeting practice, I created trading algorithms; while learning derivatives, I traded paperMoney options from <a href="https://www.tdameritrade.com/">TD Ameritrade</a>. 
+			<p>	While learning portfolio theory, I created trading algorithms; while learning derivatives, I traded paperMoney options from <a href="https://www.tdameritrade.com/" target="_blank">TD Ameritrade</a>. 
 			</p>
 			<p>
 				<img src="proj/finance/aapl.png">
 			</p>
 			<p>
-				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthlys at the money is traded at $1.76, expiring in 3 weeks' time.  One can also sell out of money call option to make a bull spread taking advantage of the low VIX environment.
+				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthlys ATM is traded at $1.76, expiring in 3 weeks' time.  One can also sell out of money call option to make a bull spread taking advantage of the low VIX environment.
 			</p>
 			<p>
-				As of 06/07/16, during the last 2 weeks, AAPL didn't rise to $100-$103 range that I anticipated. The day after we bought the $100 call and sold $105 call, AAPL had 1% gain, which could bring us in 31% profit on a single day. However things went South after Memorial weekend, compounded by negative Theta, as it got closer to the expiry. We closed the $100 call after Memorial 6/1. We ended losing (1.1 - 1.7) / 1.7 = - 35% on the $100 calls. Looking forward we can probably let the $105 calls expire and mitigate losses to (1.1 + .34 - 1.7) / 1.7 = - 15%.
+				As of 06/07/16, during the last 2 weeks, AAPL didn't rise to $100-$103 range that I anticipated. The day after I bought the $100 call and sold $105 call, AAPL had 1% gain, which could bring in 31% profit on a single day. However things went South after Memorial weekend, compounded by negative Theta, as it got closer to the expiry. I closed the $100 call after Memorial 6/1. I ended losing (1.1 - 1.7) / 1.7 = - 35% on the $100 calls. Looking forward I can probably let the $105 calls expire and mitigate losses to (1.1 + .34 - 1.7) / 1.7 = - 15%.
 			</p>
 			<p>
-				A few lessons I learned from this case: cashing in profits quickly; paying more attention to the calendar dynamics -- 2 weeks before the expiry is too much a burden to bear; never executing naked options; documenting what leads to the trading decisions and making reflections on what works and doesn't.  
+				A few lessons I learned from this case: cashing in profits quickly; paying more attention to the calendar dynamics -- 2 weeks before the expiry is too much a burden to bear; never executing naked options; documenting what leads to the trading decisions and making reflections on what worked and did not.  
 			</p>
 
 
@@ -135,7 +134,7 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
 				With deep understanding of numerical analysis, PDE, mechine learning, statistics and probability theory, I wrote computational algorithms to meet both accuracy and speed. 
 			</p>
 			<p>
-				Being familiar with many popular computational toolboxes and libraries, as a risk analyst, I compute metrics and present them in graphs. In the graph below, I used <a href="https://plot.ly/r/" target="_blank">Plotly</a> to make an interactive graph. 
+				Being familiar with many popular computational toolboxes and libraries, as a risk analyst, I compute metrics and present them in graphs. In the graph below, I used <a href="https://www.plot.ly/r/" target="_blank">Plotly</a> to make an interactive graph. 
 			</p>
 			<p text-align: center >
 				<iframe src="proj/finance/unemply.html" height="250" width="100% !important;"  scrolling="no" seamless="seamless" frameBorder="0">
@@ -152,7 +151,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 		
 			<em>4. My Courses Note</em>
 			<p>
-				<a href="note\pdf\finance\computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
+				<a href="note/pdf/finance/computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
 			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
@@ -169,6 +168,9 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<em>4. Natural Language Processing</em>
 			<em>5. Robot</em>
 			<em>6. My Courses Note</em>
+			<p>
+				<a href="note/pdf/cs/machineLearning.pdf" target="_blank">Machine Learning, Neural Network, Genetic Programming, Deep Learning, Reinforcement Learning Review</a>
+			</p>
 
 		</div>
 	<a href="#0" class="close cd-img-replace">Close</a>
@@ -182,7 +184,9 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<em>2. Fluid Dynamics</em>
 			<em>3. Computational Plasma &amp; Nuclear Physics</em>
 			<em>4. My Courses Note</em>
-			
+			<p>
+				<a href="note/pdf/cs/numericalAnaylsis.pdf" target="_blank">Numerical Analysis, High Performance Computing, Big Data, Quantum Computing Review</a>
+			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
@@ -197,7 +201,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<em>4. App for Android &amp; Windows Phone</em>
 			<em>5. My Courses Note</em>
 			<p>
-				<a href="note\pdf\cs\dataStructure.pdf" target="_blank">ADT, OOP &amp Algorithm, Design Patterns, API testing, Software testing</a>
+				<a href="note/pdf/cs/dataStructure.pdf" target="_blank">ADT, OOP &amp; Algorithm, Design Patterns, API testing, Software testing</a>
 			</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>

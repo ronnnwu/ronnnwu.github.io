@@ -3,7 +3,22 @@ var products = [
     name: 'Data Structure, OOP, Algorithm, Design Patterns, Software Testing',
     link: 'cs/dataStructure.pdf',
     properties: [
-      { name:'Computer Science', value:'data structure' }, 
+      { name:'Computer Science', value:'Data Structure' }, 
+    ]
+  },
+  {
+    name: 'Numerical Analysis, High Performance Computing, Quantum Computing',
+    link: 'cs/numericalAnaylsis.pdf',
+    properties: [
+      { name:'Computer Science', value:'High Performance' },  
+    ]
+  },
+  {
+    name: 'Machine Learning, Neural Network, Deep Learning, Reinforcement Learning',
+    link: 'cs/machineLearning.pdf',
+    properties: [
+      { name:'Computer Science', value:'Machine Learning' }, 
+      { name:'Computer Science', value:'Language Processing' }, 
     ]
   },
   {
@@ -196,6 +211,15 @@ var products = [
     ]
   }, 
 
+     {
+    name: 'Thermal and Statistical Physics',
+    link: 'phys/th/uther.pdf',
+    completeness: '[in progess]',
+    properties: [
+      { name:'Physics', value:'mechanics' },
+    ]
+  }, 
+
 
       {
     name: 'Electricity-Magnetism I',
@@ -339,15 +363,7 @@ var products = [
     properties: [
       { name:'Physics', value:'Relativity' },
     ]
-  }, 
+  },
 
-     {
-    name: 'Thermal and Statistical Physics',
-    link: 'phys/th/uther.pdf',
-    completeness: '[in progess]',
-    properties: [
-      { name:'Physics', value:'Statistical Mech' },
-    ]
-  }, 
 
   ];
