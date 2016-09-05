@@ -18,7 +18,7 @@ var products = [
     link: 'cs/machineLearning.pdf',
     properties: [
       { name:'Computer Science', value:'Machine Learning' }, 
-      { name:'Computer Science', value:'Language Processing' }, 
+      { name:'Computer Science', value:'Neural Net' }, 
     ]
   },
   {
