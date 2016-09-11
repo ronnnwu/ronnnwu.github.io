@@ -4,6 +4,7 @@ var products = [
     link: 'cs/dataStructure.pdf',
     properties: [
       { name:'Computer Science', value:'Data Structure' }, 
+      { name:'Computer Science', value:'Machine Architecture' }, 
     ]
   },
   {
@@ -17,8 +18,7 @@ var products = [
     name: 'Machine Learning, Neural Network, Deep Learning, Reinforcement Learning',
     link: 'cs/machineLearning.pdf',
     properties: [
-      { name:'Computer Science', value:'Machine Learning' }, 
-      { name:'Computer Science', value:'Neural Net' }, 
+      { name:'Computer Science', value:'Machine Learning' },    
     ]
   },
   {

@@ -45,7 +45,7 @@
 					<img src="img/pj2.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Machine Learning</h2>
-						<p>Business Analytics, Big Data, Computer Vision, Natural Language Processing</p>
+						<p>Big Data &amp; High Energy Physics</p>
 					</div>
 				</a>
 			</li>
@@ -55,7 +55,7 @@
 					<img src="img/pj3.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Numerical Methods</h2>
-						<p>Signal Processing, Fluid Dynamics, Computational Plasma &amp; Nuclear Physics</p>
+						<p>Plasma &amp; Fusion Physics</p>
 					</div>
 				</a>
 			</li>
@@ -64,8 +64,8 @@
 				<a href="#project-4">
 					<img src="img/pj4.jpg" alt="project image">
 					<div class="project-info">
-						<h2>Web/App Design</h2>
-						<p>Gaming, Front-End &amp; Back-End Designs, App for Android &amp; Windows Phone</p>
+						<h2>Back to the Future</h2>
+						<p>Holographic Lens, Space Travel</p>
 					</div>
 				</a>
 			</li>
@@ -82,7 +82,7 @@
 		<div>
 			<h2>Finance</h2>
 			<em>1. Algorithmic Trading</em>
-			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebelances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, and it had low beta and low volatility.
+			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebalances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, and it had low beta and low volatility.
 			</p>
 			<p text-align: center >
 				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
@@ -102,14 +102,14 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
 </code></pre>		
 
 
-			<p>There are many advanced techniques out here that are often bestowed upon the simple mean-reversion and momemtum strategies: (check them out in my other project categories) </p>
+			<p>There are many advanced techniques out here that are often bestowed upon the simple mean-reversion and momentum strategies: (check them out in my other project categories) </p>
 
-			<P>&#9658; Mechine Learning: <a href="https://www.psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://www.alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp; categorization (supervised/unsupervised learning).</P>
+			<P>&#9658; Machine Learning: <a href="https://www.psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://www.alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp; categorization (supervised/unsupervised learning).</P>
 
 			<p>&#9658; Numerical Methods: modern portfolio theory, dynamic mode decomposition (PCA), random matrix theory.
 			</p>
 
-			<p>&#9658; Web/App design: using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for porfolio manager and traders to automate their works.</p>
+			<p>&#9658; Web/App design: using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for portfolio  manager and traders to automate their works.</p>
 
 
 			<em>2. Paper-Money Option Trading</em>
@@ -119,10 +119,10 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
 				<img src="proj/finance/aapl.png">
 			</p>
 			<p>
-				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthlys ATM is traded at $1.76, expiring in 3 weeks' time.  One can also sell out of money call option to make a bull spread taking advantage of the low VIX environment.
+				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthly's ATM is traded at $1.76, expiring in 3 weeks' time.  One can also sell out of money call option to make a bull spread taking advantage of the low VIX environment.
 			</p>
 			<p>
-				As of 06/07/16, during the last 2 weeks, AAPL didn't rise to $100-$103 range that I anticipated. The day after I bought the $100 call and sold $105 call, AAPL had 1% gain, which could bring in 31% profit on a single day. However things went South after Memorial weekend, compounded by negative Theta, as it got closer to the expiry. I closed the $100 call after Memorial 6/1. I ended losing (1.1 - 1.7) / 1.7 = - 35% on the $100 calls. Looking forward I can probably let the $105 calls expire and mitigate losses to (1.1 + .34 - 1.7) / 1.7 = - 15%.
+				As of 06/07/16, during the last 2 weeks, AAPL didn't rise to $100-$103 range that I anticipated. The day after I bought the $100 call and sold $105 call, AAPL had 1% gain, which could bring in 31% profit on a single day. However, things went South after Memorial weekend, compounded by negative Theta, as it got closer to the expiry. I closed the $100 call after Memorial 6/1. I ended losing (1.1 - 1.7) / 1.7 = - 35% on the $100 calls. Looking forward I can probably let the $105 calls expire and mitigate losses to (1.1 + .34 - 1.7) / 1.7 = - 15%.
 			</p>
 			<p>
 				A few lessons I learned from this case: cashing in profits quickly; paying more attention to the calendar dynamics -- 2 weeks before the expiry is too much a burden to bear; never executing naked options; documenting what leads to the trading decisions and making reflections on what worked and did not.  
@@ -131,7 +131,7 @@ high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
 
 			<em>3. Computational Finance</em>
 			<p>
-				With deep understanding of numerical analysis, PDE, mechine learning, statistics and probability theory, I wrote computational algorithms to meet both accuracy and speed. 
+				With deep understanding of numerical analysis, PDE, machine learning, statistics and probability theory, I wrote computational algorithms to meet both accuracy and speed. 
 			</p>
 			<p>
 				Being familiar with many popular computational toolboxes and libraries, as a risk analyst, I compute metrics and present them in graphs. In the graph below, I used <a href="https://www.plot.ly/r/" target="_blank">Plotly</a> to make an interactive graph. 
@@ -153,6 +153,9 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<p>
 				<a href="note/pdf/finance/computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
 			</p>
+			<p>
+				<a href="note/pdf/cs/dataStructure.pdf" target="_blank">ADT, OOP &amp; Algorithm, Design Patterns, Software testing, Compile Language, Operating System (in progress)</a>
+				</p>
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
@@ -161,13 +164,23 @@ config(p, displayModeBar=FALSE)</code></pre>
 		<div>
 			<h2>Machine Learning</h2>
 
-			<em>1. Experimental Particle Physics</em>
+			<em>1. ML meets HEP</em>
+			<p>
+				The Large Hadron Collider (LHC) in Switzerland is the single largest machine in the world. The main mission of LHC is to detect new particles and search for new physics beyond the standard model. Not only does the machine produce unmanageable quantities of data, but also the measurements themselves such as impact parameter, momentum, are indeterministic. In terms of machine learning HMM language, the latent states (unobservable short life quantum intermediate processes) are not the same as the observables. Figuring out what is noise and what isn't becomes the essential task. Thus no wonder why statistics and machine learning have to be the central tools for analysis.
+            	</p>
 
-			<em>2. Neural Network Trading Algorithm</em>
-			<em>3. Computer Vision</em>
-			<em>4. Natural Language Processing</em>
-			<em>5. Robot</em>
-			<em>6. My Courses Note</em>
+			<p text-align: center >
+				<iframe src="proj/learning/MLmeetHEP.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
+				</iframe>
+			</p>
+
+            	<p>
+            		To learn more about how ML meets HEP, watch this <a href="https://www.youtube.com/watch?v=QHPfkq1frNI" target="_blank">talk</a> by Kyle Cranmer (NYU), who is an invited speaker at the 2016 <a href="https://nips.cc/" target="_blank">NIPS</a> conference. While studying under Prof. Cranmer, I wrote a report describing jet algorithm and simulation algorithm. It can be found <a href="proj/learning/HEPreport.pdf" target="_blank">here</a>.
+            	</p> 
+
+     
+
+			<em>2. My Courses Note</em>
 			<p>
 				<a href="note/pdf/cs/machineLearning.pdf" target="_blank">Machine Learning, Neural Network, Deep Learning, Reinforcement Learning, Artificial Intelligence</a>
 			</p>
@@ -179,17 +192,17 @@ config(p, displayModeBar=FALSE)</code></pre>
 	<div class="cd-project-content" id="project-3">
 		<div>
 			<h2>Numerical Method</h2>
- 
-			<em>1. Computational Plasma &amp; Fusion Physics</em>
+
+			<em>1. Fusion Energy</em>
 			<p>
-				Nuclear fusion plants are being experimentally built around the world. Fusion energy may become the most promising energy resource, by generating an infinitely amount of sustainable energy, while producing 100 times less radiative wastes than existing nuclear power plants, all of which are powered by fission. In contrast to fission's deadly reactant, Uranium, fusion uses stable and safe hydrogen. 
+				Nuclear fusion plants are being experimentally built around the world. Fusion energy may become one of the most promising energy resources, by generating an infinitely amount of sustainable energy, while producing 100 times less radiative wastes than existing nuclear power plants, all of which are powered by fission. In contrast to fission's deadly reactant, Uranium, fusion uses stable and safe hydrogen. 
 			</p>  
 
  			<p style="text-align:center">
 			<a href="proj/computing/Fusion_Slides.pdf" target="_blank"><img   src="img/Fslides.jpg"  alt="project image"></a>
 			</p>
 			<p>
-				Trying to tackle some of the technical challenges surrounding fusion devices, my advisor and I proposed a new algorithm for drawing 3D magnetic fields lines inside of reactors and for determining if the magnetic configurations were controllable or not. In the research, we developed a new algorithmic substitute to Runge-Kutta, modified Lax-Friedrichs sweeping method; proposed and established a link between Courant stability in numerical analysis and the physical stability of the magnetic configurations inside of the reactors.
+				Trying to tackle some of the technical challenges surrounding fusion devices, my advisor and I proposed a new algorithm for drawing 3D magnetic fields lines inside of reactors and for determining if the magnetic configurations were controllable or not. In the research, we developed a new algorithmic substitute to Runge-Kutta, by modifying Lax-Friedrichs sweeping method, which linked Courant stability in numerical analysis to the physical stability of the magnetic configurations inside of the reactors.
 			</p>
 			<p>
 				Such project was a perfect fit for me, since it demanded a combined comprehension of advanced physics, rigorous mathematics and computation efficiency. The slides are provided above and the paper can be read <a href="proj/computing/thesis.pdf" target="_blank">here</a>.
@@ -207,16 +220,19 @@ config(p, displayModeBar=FALSE)</code></pre>
 
 	<div class="cd-project-content" id="project-4">
 		<div>
-			<h2>Web/App Design</h2>
+			<h2>Future Projects</h2>
+ 
 
-			<em>1. Gaming</em>
-			<em>2. Front-End Design</em>
-			<em>3. Back-End Design</em>
-			<em>4. App for Android &amp; Windows Phone</em>
-			<em>5. My Courses Note</em>
+			<em>1. Holographic Lens</em>  
+
+			<p>Matter science (quantum mechanics) meets virtual reality</p>
+
+			<em>2. Affordable Space Travel</em>
+
 			<p>
-				<a href="note/pdf/cs/dataStructure.pdf" target="_blank">ADT, OOP &amp; Algorithm, Design Patterns, API testing, Software testing</a>
+				Commercialize space technology, realizing the dream of Einstein or Elon Musk? 
 			</p>
+ 
 		</div>
 		<a href="#0" class="close cd-img-replace">Close</a>
 	</div> <!-- .cd-project-content -->
