@@ -1,7 +1,8 @@
 var products = [
   {
-    name: 'Data Structure, OOP, Algorithm, Design Patterns, Software Testing',
+    name: 'Data Structure, OOP, Algorithm, Design Patterns, Compiler Language, Operating System',
     link: 'cs/dataStructure.pdf',
+    completeness: '[in progess]',
     properties: [
       { name:'Computer Science', value:'Data Structure' }, 
       { name:'Computer Science', value:'Machine Architecture' }, 
@@ -226,7 +227,7 @@ var products = [
     link: 'phys/em/uem1.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'electric mech' },
+      { name:'Physics', value:'electric mechanics' },
     ]
   }, 
 
@@ -235,7 +236,7 @@ var products = [
     link: 'phys/em/uem2.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'electric mech' },
+      { name:'Physics', value:'electric mechanics' },
     ]
   }, 
 
@@ -244,7 +245,7 @@ var products = [
     name: 'Electromagnetism',
     link: 'phys/em/gem.pdf',
     properties: [
-      { name:'Physics', value:'electric mech' },
+      { name:'Physics', value:'electric mechanics' },
     ]
   }, 
 
@@ -252,7 +253,7 @@ var products = [
     name: 'Classical Fields & Waves',
     link: 'phys/em/gfield.pdf',
     properties: [
-      { name:'Physics', value:'electric mech' },
+      { name:'Physics', value:'electric mechanics' },
     ]
   }, 
 
@@ -262,7 +263,7 @@ var products = [
     link: 'phys/pp/unpc.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'Partical Phys' },
+      { name:'Physics', value:'Particle Physics' },
     ]
   }, 
 
@@ -271,7 +272,7 @@ var products = [
     link: 'phys/pp/gparti.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'Partical Phys' },
+      { name:'Physics', value:'Particle Physics' },
     ]
   }, 
 
@@ -280,7 +281,7 @@ var products = [
     link: 'phys/pp/gpp1.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'Partical Phys' },
+      { name:'Physics', value:'Particle Physics' },
     ]
   }, 
 
@@ -288,7 +289,7 @@ var products = [
     name: 'Intro to Quantum Mechanics I',
     link: 'phys/qm/uqme1.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   }, 
 
@@ -296,7 +297,7 @@ var products = [
     name: 'Intro to Quantum Mechanics II',
     link: 'phys/qm/uqme2.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   }, 
 
@@ -304,14 +305,14 @@ var products = [
     name: 'Quantum Mechanics I',
     link: 'phys/qm/gqm1.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics'},
     ]
   }, 
        {
     name: 'Quantum Mechanics II',
     link: 'phys/qm/gqm2.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   },       
 
@@ -319,7 +320,7 @@ var products = [
     name: 'Quantum Field Theory I',
     link: 'phys/qm/qft1.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   }, 
 
@@ -327,7 +328,7 @@ var products = [
     name: 'Quantum Field Theory II',
     link: 'phys/qm/qft2.pdf',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   }, 
 
@@ -336,7 +337,7 @@ var products = [
     link: 'phys/qm/qft3.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'Quantum Mech' },
+      { name:'Physics', value:'Quantum Mechanics' },
     ]
   }, 
        {
