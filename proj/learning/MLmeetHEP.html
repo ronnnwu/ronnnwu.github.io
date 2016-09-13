@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>MLmeetHEP</title>
+<title>Untitled</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -176,17 +176,248 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Finding-$&#964;^{-}-&#8594;-&#956;^{-}&#956;^{+}&#956;^{-}-$">Finding $&#964;^{-} &#8594; &#956;^{-}&#956;^{+}&#956;^{-} $<a class="anchor-link" href="#Finding-$&#964;^{-}-&#8594;-&#956;^{-}&#956;^{+}&#956;^{-}-$">&#182;</a></h1><p>Below is a real example from <a href="http://www.home.cern/about/updates/2015/07/flavours-physics-join-lhcb-machine-learning-contest" target="_blank">CERN competition</a>, hosted on <a href="http://www.kaggle.com/c/flavours-of-physics" target="_blank">Kaggle</a>. It asks</p>
+<h1 id="Finding-$&#964;^{-}-&#8594;-&#956;^{-}&#956;^{+}&#956;^{-}$-Using-tensorFlow">Finding $&#964;^{-} &#8594; &#956;^{-}&#956;^{+}&#956;^{-}$ Using tensorFlow<a class="anchor-link" href="#Finding-$&#964;^{-}-&#8594;-&#956;^{-}&#956;^{+}&#956;^{-}$-Using-tensorFlow">&#182;</a></h1><p>This is a real example from <a href="http://www.home.cern/about/updates/2015/07/flavours-physics-join-lhcb-machine-learning-contest" target="_blank">CERN competition</a>, hosted on <a href="http://www.kaggle.com/c/flavours-of-physics"  target="_blank">Kaggle</a> (ended Oct 2015). It asks to find $τ → 3μ$ (Lepton flavor violation if detected would indicate new physics beyond the SM). Some of the labeled data are artificially made, but the successful learning models from the competition can be used for real detections. See this technical <a href="https://indico.cern.ch/event/465572/contributions/1984418/attachments/1203635/1752962/Ustyuzhanin__FoP_Summary.pdf"  target="_blank">CERN report</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The 1st place term solution published on the <a href="http://blog.kaggle.com/2015/11/30/flavour-of-physics-technical-write-up-1st-place-go-polar-bears/"  target="_blank">Kaggle blog</a> and the <a href="https://github.com/aguschin/flavours-of-physics/blob/master/AssemblingFinalSolution4.ipynb" target="_blank">github</a> showed they used "physical intuition + xgboosts + ANN". The <a href="https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/" target="_blank">tree boost method</a> was used by some winning terms in the last contest (actually xgboosts was popular in many other contest too), which was searching for <a href="https://www.kaggle.com/c/higgs-boson" target="_blank">Higgs boson</a> (ended Sept 2014). Reference <a href="http://www.jmlr.org/proceedings/papers/v42/chen14.pdf" target="_blank">"Higgs Boson Discovery with Boosted Trees"</a> and <a href="http://www.jmlr.org/proceedings/papers/v42/cowa14.pdf" target="_blank">"The Higgs boson machine learning challenge"</a></p>
+<p>This 3-year-old video by David Hogg (NYU) (April 2013) reflects how much things have changed in term of the adoption of ANN in the science community.  Thanks to tensorFlow (Google), Torch (NYU, facebook). ANN is a lot easier to use now!</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;aA3qdegi8Vw&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">564</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="mi">642</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+             <span class="n">theme</span><span class="o">=</span><span class="s2">&quot;light&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+             <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="n">showinfo</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result" align="center" >
+
+        <iframe
+            width="500"
+            height="400"
+            src="https://www.youtube.com/embed/aA3qdegi8Vw?showinfo=0&end=642&color=white&start=564&theme=light&rel=0&autoplay=0"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">My notes on boosting discussed the main difference between tree</span>
+<span class="sd">bagging (random forest) and tree boosting. Essentially one is</span>
+<span class="sd">variance reduction and the other increasing accuracy, but prone </span>
+<span class="sd">to overfitage.</span>
+
+<span class="sd">We can also combine the two </span>
+<span class="sd">the following code were copied from </span>
+<span class="sd">https://www.kaggle.com/benhamner/flavours-of-physics/</span>
+<span class="sd">                           rf-xgboost-example/code</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">import</span> <span class="nn">xgboost</span> <span class="kn">as</span> <span class="nn">xgb</span>
+
+<span class="k">print</span> <span class="s2">&quot;Train a Random Forest model&quot;</span>
+<span class="n">rf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">rf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="n">train</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">])</span>         
+<span class="c1">#train[features] are features, </span>
+<span class="c1">#train[&quot;signal&quot;] = 0/1 labels for back/foreground</span>
+
+<span class="k">print</span> <span class="s2">&quot;Train a XGBoost model&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;objective&quot;</span><span class="p">:</span> <span class="s2">&quot;binary:logistic&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;eta&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+          <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+          <span class="s2">&quot;min_child_weight&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="s2">&quot;silent&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">&quot;subsample&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+          <span class="s2">&quot;colsample_bytree&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+          <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">num_trees</span><span class="o">=</span><span class="mi">250</span>
+<span class="n">gbm</span> <span class="o">=</span> <span class="n">xgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">features</span><span class="p">],</span>
+                       <span class="n">train</span><span class="p">[</span><span class="s2">&quot;signal&quot;</span><span class="p">]),</span> <span class="n">num_trees</span><span class="p">)</span>
+
+<span class="c1">#Combining tree boost and random forest</span>
+<span class="k">print</span> <span class="s2">&quot;Make predictions on the test set&quot;</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="p">(</span><span class="n">rf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">features</span><span class="p">])[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span>
+              <span class="n">gbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xgb</span><span class="o">.</span><span class="n">DMatrix</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">features</span><span class="p">])))</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Walk through 1st place term technical Write-Up on the blog, </span>
+<span class="sd">find out that they first create new attribute--new mass,</span>
+<span class="sd">which turns out to be highly correlated to the measured mass</span>
+<span class="sd">in the train set</span>
+
+<span class="sd">the following codes were copied from their github solution</span>
+<span class="sd">https://github.com/aguschin/flavours-of-physics/blob/</span>
+<span class="sd">                       master/AssemblingFinalSolution4.ipynb</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="k">for</span> <span class="n">tt</span> <span class="ow">in</span> <span class="n">train</span><span class="p">,</span><span class="n">test</span><span class="p">,</span> <span class="n">check_agreement</span><span class="p">,</span> <span class="n">check_correlation</span><span class="p">:</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;p0_pz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span><span class="o">.</span><span class="n">p0_p</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">tt</span><span class="o">.</span><span class="n">p0_pt</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;p1_pz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span><span class="o">.</span><span class="n">p1_p</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">tt</span><span class="o">.</span><span class="n">p1_pt</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;p2_pz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span><span class="o">.</span><span class="n">p2_p</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">tt</span><span class="o">.</span><span class="n">p2_pt</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;pz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tt</span><span class="o">.</span><span class="n">p0_pz</span> <span class="o">+</span> <span class="n">tt</span><span class="o">.</span><span class="n">p1_pz</span> <span class="o">+</span> <span class="n">tt</span><span class="o">.</span><span class="n">p2_pz</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tt</span><span class="o">.</span><span class="n">pt</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">tt</span><span class="o">.</span><span class="n">pz</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tt</span><span class="o">.</span><span class="n">FlightDistance</span> <span class="o">/</span> <span class="n">tt</span><span class="o">.</span><span class="n">LifeTime</span>
+    <span class="n">tt</span><span class="p">[</span><span class="s1">&#39;new_mass&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tt</span><span class="o">.</span><span class="n">p</span> <span class="o">/</span> <span class="n">tt</span><span class="o">.</span><span class="n">speed</span>
+    
+<span class="n">features_m</span> <span class="o">=</span> <span class="n">features</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;new_mass&#39;</span><span class="p">]</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">cross-validation was used throughout.</span>
+
+<span class="sd">The mass term was missing in the testing set, so </span>
+<span class="sd">they used xgboost to predict mass, called </span>
+<span class="sd">new_mass2 in the training set also, and add two more new features </span>
+<span class="sd"> &#39;new_mass_delta&#39;, &#39;new_mass_ratio&#39;</span>
+<span class="sd"> </span>
+<span class="sd">then they used nolearn.lasagne for neural net + parallelism</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">nolearn</span>
+<span class="kn">from</span> <span class="nn">lasagne.layers</span> <span class="kn">import</span> <span class="n">DenseLayer</span><span class="p">,</span> <span class="n">InputLayer</span><span class="p">,</span> <span class="n">NINLayer</span>
+<span class="kn">from</span> <span class="nn">lasagne.nonlinearities</span> <span class="kn">import</span> <span class="n">softmax</span><span class="p">,</span> <span class="n">rectify</span><span class="p">,</span> <span class="n">sigmoid</span>
+<span class="kn">from</span> <span class="nn">lasagne.updates</span> <span class="kn">import</span> <span class="n">rmsprop</span><span class="p">,</span> <span class="n">adagrad</span><span class="p">,</span> <span class="n">sgd</span><span class="p">,</span> <span class="n">adadelta</span>
+<span class="kn">from</span> <span class="nn">nolearn.lasagne</span> <span class="kn">import</span> <span class="n">NeuralNet</span>
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">NeuralNet</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="n">layers0</span><span class="p">,</span>
+
+                 <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">Xtrain</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                 <span class="n">dense1_num_units</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="c1"># 1 hidden layer with 8 neurons</span>
+
+                 <span class="n">output_num_units</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                 <span class="n">output_nonlinearity</span><span class="o">=</span><span class="n">softmax</span><span class="p">,</span> <span class="c1">#then softmax layer</span>
+
+                 <span class="n">update</span><span class="o">=</span><span class="n">adagrad</span><span class="p">,</span>
+                 <span class="n">update_learning_rate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+
+                 <span class="n">eval_size</span><span class="o">=.</span><span class="mo">005</span><span class="p">,</span>
+                 <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">max_epochs</span><span class="o">=</span><span class="mi">3000</span><span class="p">)</span>
+
+<span class="n">net</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtrain</span><span class="p">,</span> <span class="n">Ytrain</span><span class="p">)</span> <span class="p">;</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">in summary from their codes we learn that xgboost is about </span>
+<span class="sd">95-98% accurate with varied numbers of trees</span>
+<span class="sd">and NN is about 99.8% accurate with k-ford (k=5)</span>
+<span class="sd">then they blended everything together  </span>
+
+<span class="sd">They didn&#39;t show how they got the final boosting formula, but </span>
+<span class="sd">looked like it was from other NN to calculate the weights</span>
+
+<span class="sd">Finally they got 0.999997749873 accuracy</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">One can replace the nolearn.lasagne part in their solution</span>
+<span class="sd">by tensorFlow logistic regression, </span>
+<span class="sd">it runs in parallel and its accuracy is about 99.2%.</span>
+
+<span class="sd">reference</span>
+<span class="sd">www.tensorflow.org/versions/0.6.0/tutorials/mnist/pros/index.html </span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">InteractiveSession</span><span class="p">()</span>
+
+<span class="c1">#the reason tensorFlow need placehodler is because</span>
+<span class="c1">#it runs in parallel. It needs to assign a batch of</span>
+<span class="c1">#matrices to different processors.  </span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span> <span class="c1">#number of features</span>
+<span class="n">y_</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">45</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span> 
+<span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">2</span><span class="p">]))</span>
+
+
+<span class="n">py_x</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> 
+
+<span class="c1"># Define loss and optimizer then train</span>
+<span class="n">cross</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">py_x</span><span class="p">,</span> <span class="n">Y</span><span class="p">))</span>
+<span class="n">train_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">GradientDescentOptimizer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">cross</span><span class="p">)</span>
+<span class="n">predict_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">py_x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">initialize_all_variables</span><span class="p">())</span> 
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+  <span class="n">batch</span> <span class="o">=</span> <span class="n">xtrain</span><span class="o">.</span><span class="n">next_batch</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="c1">#batch size</span>
+  <span class="n">train_step</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_</span><span class="p">:</span> <span class="n">batch</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">keep_prob</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">})</span>
+ 
 </pre></div>
 
 </div>

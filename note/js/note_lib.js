@@ -41,10 +41,10 @@ var products = [
     link: 'finance/computeFinance.pdf',
     properties: [
       { name:'Finance', value:'derivative' }, 
-      { name:'Finance', value:'stats/prob' },
-      { name:'Mathematics', value:'stats/prob' },
+      { name:'Finance', value:'stats/Probability' },
+      { name:'Mathematics', value:'stats/Probability' },
       { name:'Finance', value:'time series' },
-      { name:'Finance', value:'trading algo' },
+      { name:'Finance', value:'trading algorithm' },
     ]
   },
   {
@@ -167,8 +167,8 @@ var products = [
     name: 'Probability Theory',
     link: 'math/prob/unpb.pdf',
     properties: [
-      { name:'Finance', value:'stats/prob' },
-      { name:'Mathematics', value:'stats/prob' },
+      { name:'Finance', value:'stats/Probability' },
+      { name:'Mathematics', value:'stats/Probability' },
     ]
   }, 
 
@@ -344,7 +344,7 @@ var products = [
     name: 'Introduction to General Relativity',
     link: 'phys/gr/uggr.pdf',
     properties: [
-      { name:'Physics', value:'Relativity' },
+      { name:'Physics', value:'General Relativity' },
     ]
   }, 
 
@@ -353,7 +353,7 @@ var products = [
     name: 'General Relativity I',
     link: 'phys/gr/ggrr.pdf',
     properties: [
-      { name:'Physics', value:'Relativity' },
+      { name:'Physics', value:'General Relativity' },
     ]
   }, 
 
@@ -362,7 +362,7 @@ var products = [
     link: 'phys/gr/ggrr2.pdf',
     completeness: '[in progess]',
     properties: [
-      { name:'Physics', value:'Relativity' },
+      { name:'Physics', value:'General Relativity' },
     ]
   },
 
