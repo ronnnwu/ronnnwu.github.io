@@ -348,6 +348,11 @@ Projects Slider
   font-weight: bold;
   line-height: 1.2;
 }
+.cd-slider h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
 .cd-slider p {
   font-size: 1.4rem;
   opacity: .6;
@@ -861,6 +866,11 @@ Project content panel
   font-weight: bold;
   margin: 0.5em auto;
 }
+.cd-project-content h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.5em auto;
+}
 .cd-project-content em {
   display: block;
   font-size: 2rem;
@@ -888,6 +898,9 @@ Project content panel
 @media only screen and (min-width: 900px) {
   .cd-project-content h2 {
     font-size: 6rem;
+  }
+  .cd-project-content h3 {
+    font-size: 4rem;
   }
   .cd-project-content em {
     font-size: 2.4rem;
