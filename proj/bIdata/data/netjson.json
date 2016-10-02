@@ -1,8 +1,7 @@
 {
     "type": "NetworkGraph",
-    "label": "US large Cap ETF Correlation Network", 
-    "version": "0.0.0.1",
-    "metric": "Pearson Correlation",
+    "label": "US large Cap ETF Correlation",  
+    "metric": "Pearson",
     "nodes": [      
             {"id": "AAPL"}, {"id": "ABBV"}, {"id": "ABT"},
             {"id": "ACN"}, {"id": "AGN"}, {"id": "AIG"}, 

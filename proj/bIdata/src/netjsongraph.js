@@ -217,7 +217,7 @@
             onClickNode: function(n) {
                 var overlay = d3.select(".njg-overlay"),
                     overlayInner = d3.select(".njg-overlay > .njg-inner"),
-                    html = "<p><b>id</b>: " + n.id + "</p>";
+                    html = "<p><b>Ticker</b>: " + n.id + "</p>";
                     if(n.label) { html += "<p><b>label</b>: " + n.label + "</p>"; }
                     if(n.properties) {
                         for(var key in n.properties) {
@@ -225,7 +225,7 @@
                             html += "<p><b>"+key.replace(/_/g, " ")+"</b>: " + n.properties[key] + "</p>";
                     }
                 }
-                if(n.linkCount) { html += "<p><b>links</b>: " + n.linkCount + "</p>"; }
+                if(n.linkCount) { html += "<p><b>Number of Connections</b>: " + n.linkCount + "</p>"; }
                 if(n.local_addresses) {
                     html += "<p><b>local addresses</b>:<br>" + n.local_addresses.join('<br>') + "</p>";
                 }
@@ -245,8 +245,8 @@
             onClickLink: function(l) {
                 var overlay = d3.select(".njg-overlay"),
                     overlayInner = d3.select(".njg-overlay > .njg-inner"),
-                    html = "<p><b>ticker</b>: " + (l.source.label || l.source.id) + "</p>";
-                    html += "<p><b>ticker</b>: " + (l.target.label || l.target.id) + "</p>";
+                    html = "<p><b>Ticker</b>: " + (l.source.label || l.source.id) + "</p>";
+                    html += "<p><b>Ticker</b>: " + (l.target.label || l.target.id) + "</p>";
                     html += "<p><b>weight</b>: " + l.cost + "</p>";
                 if(l.properties) {
                     for(var key in l.properties) {
