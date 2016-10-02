@@ -463,7 +463,7 @@
                 var attrs = ["protocol",
                              "version",
                              "revision",
-                             "metric",
+                             "description",
                              "router_id",
                              "topology_id"],
                     html = "";
@@ -477,8 +477,8 @@
                     }
                 }
                 // Add nodes and links count
-                html += "<p><b>Tickers</b>: <span>" + graph.nodes.length + "</span></p>";
-                html += "<p><b>Connections</b>: <span>" + graph.links.length + "</span></p>";
+                html += "<p><b>tickers</b>: <span>" + graph.nodes.length + "</span></p>";
+                html += "<p><b>connections</b>: <span>" + graph.links.length + "</span></p>";
                 metadataInner.html(html);
                 metadata.classed("njg-hidden", false);
 
