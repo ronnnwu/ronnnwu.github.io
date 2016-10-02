@@ -463,7 +463,7 @@
                 var attrs = ["protocol",
                              "version",
                              "revision",
-                             "description",
+                             "manual",
                              "router_id",
                              "topology_id"],
                     html = "";
