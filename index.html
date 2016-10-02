@@ -225,10 +225,15 @@ config(p, displayModeBar=FALSE)</code></pre>
  			<em>1. Columbia DataScience Hackathon 2016</em>
 
 			<p>
-				 It is well-known that tasks that are difficult for human beings are usually very easy for computers and tasks that are very difficult for computers are easy for human beings. For example graph partitioning (clustering) is NP-hard, but very esay for humans because we can just see it. 
-				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, our team used graph theory to build a networks of asset classes (stocks, funds, commodities, economic indicators,...) and depicting relationship among them. Once we have a picture of them, we can narrow them to the factors that most important to the assets we are interested in.
-				 How to define relationship? The easiest one is P
-				    It can be found <a href="proj/bIdata/index.html" target="_blank" >here</a>. 
+				 It is well-known that tasks that are difficult for human beings are usually very easy for computers and tasks that are very difficult for computers are easy for human beings. For example graph partitioning is NP-hard, but very easy for humans because we can just see it. 
+				 </p>
+				 <p>
+				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, our team used graph theory to build networks of asset classes (stocks, funds, commodities, economic indicators,...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
+				</p><p>
+				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we defined the coefficient of determination (r-square of linear regression) as the new weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the new weight. 
+				</p><p>
+				 The project is just a beginning. We can go beyond one-step prediction and move to multi-step, i.e. deep learning and looking for hidden layers. In doing so, better indicators may be formed or better financial instruments may be structured. 
+				 The source code can be found <a href="http://nbviewer.jupyter.org/github/ronnnwu/Bloomberg_data_hackathon/blob/master/bl.ipynb" target="_blank" >here</a>, and a js visualization can be opened by clicking the image below.
 			</p>
 
  			<p style="text-align:center">
@@ -239,11 +244,16 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<em>2. Columbia DevFest Hackathon 2016</em>  
 
 			<p> 
-				Participated in the <a href="http://devfe.st/" target="_blank" >hackathon</a>, my roommate and I built a social network site. It can be found <a href="http://devpost.com/software/modsecure" target="_blank" >here</a>. 
+				In the wake of hacking activities across the nation and sharing information securely is at the greatest dangerous ever, our term participated in the <a href="http://devfe.st/" target="_blank" >App Hackathon</a>, and we wanted to build a safest social network site. 
+			</p>
+			<p>
+				The idea was that a safer way to share messages was to use no encryption and no personal information attached to it. Our app allows user to go to our website and claim alias, then post the message there and give his alias to the people he wants to share the message with. His friends will go to our site to read the message without a password, and the alias will expire and become available  for other users to claim in 2 days if the original creator of the alias doesn't login for the period of time.
+			</p>
+			<p>
+				The source code can be found <a href="https://github.com/mgandham/modsecure" target="_blank" >here</a>, and the site can be opened <a href="http://www.modsecure.com" target="_blank" >here</a>.
 			</p>
 
 
- 
 			<h3>Coding Exercise</h3>
 			<p>
 				I am working on the code interview exercises in Gayle Laakmann McDowell's book <a href="http://www.crackingthecodinginterview.com/" target="_blank">Cracking the Coding Interview</a>. The official Python solution are missing a few chapters, so I intend to make it complete.
