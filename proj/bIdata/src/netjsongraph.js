@@ -245,9 +245,9 @@
             onClickLink: function(l) {
                 var overlay = d3.select(".njg-overlay"),
                     overlayInner = d3.select(".njg-overlay > .njg-inner"),
-                    html = "<p><b>source</b>: " + (l.source.label || l.source.id) + "</p>";
-                    html += "<p><b>target</b>: " + (l.target.label || l.target.id) + "</p>";
-                    html += "<p><b>cost</b>: " + l.cost + "</p>";
+                    html = "<p><b>ticker</b>: " + (l.source.label || l.source.id) + "</p>";
+                    html += "<p><b>ticker</b>: " + (l.target.label || l.target.id) + "</p>";
+                    html += "<p><b>weight</b>: " + l.cost + "</p>";
                 if(l.properties) {
                     for(var key in l.properties) {
                         if(!l.properties.hasOwnProperty(key)) { continue; }
@@ -477,8 +477,8 @@
                     }
                 }
                 // Add nodes and links count
-                html += "<p><b>nodes</b>: <span>" + graph.nodes.length + "</span></p>";
-                html += "<p><b>links</b>: <span>" + graph.links.length + "</span></p>";
+                html += "<p><b>Tickers</b>: <span>" + graph.nodes.length + "</span></p>";
+                html += "<p><b>Connections</b>: <span>" + graph.links.length + "</span></p>";
                 metadataInner.html(html);
                 metadata.classed("njg-hidden", false);
 
