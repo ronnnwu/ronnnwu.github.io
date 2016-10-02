@@ -1,9 +1,7 @@
 {
     "type": "NetworkGraph",
     "label": "US Large Cap ETF Corr",  
-    "description": "The graph gives Pearson corr among 100 largest stocks. 
-            If you cannot see the links, 
-            just grab a stock and pull it away from the graph.",
+    "description": "The graph gives Pearson corr among 100 largest stocks. If you cannot see the links, just grab a stock and pull it away from the graph.",
     "nodes": [      
             {"id": "AAPL"}, {"id": "ABBV"}, {"id": "ABT"},
             {"id": "ACN"}, {"id": "AGN"}, {"id": "AIG"}, 
