@@ -230,10 +230,10 @@ config(p, displayModeBar=FALSE)</code></pre>
 				 <p>
 				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, our team used graph theory to build networks of asset classes (stocks, funds, commodities, economic indicators,...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
 				</p><p>
-				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we defined the coefficient of determination (r-square of linear regression) as the new weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the new weight. 
+				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we let the coefficient of determination (r-square of linear regression) as the new edge weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the edge new weight or combining many weights to one edge weight like boosting. 
 				</p><p>
 				 The project is just a beginning. We can go beyond one-step prediction and move to multi-step, i.e. deep learning and looking for hidden layers. In doing so, better indicators may be formed or better financial instruments may be structured. 
-				 The source code can be found <a href="http://nbviewer.jupyter.org/github/ronnnwu/Bloomberg_data_hackathon/blob/master/bl.ipynb" target="_blank" >here</a>, and a js visualization can be opened by clicking the image below.
+				 The source code can be found <a href="http://nbviewer.jupyter.org/github/ronnnwu/Bloomberg_data_hackathon/blob/master/bl.ipynb" target="_blank" >here</a>, and a NetJSON visualization can be opened by clicking the image below.
 			</p>
 
  			<p style="text-align:center">

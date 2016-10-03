@@ -1,7 +1,7 @@
 {
     "type": "NetworkGraph",
     "label": "Pearson Correlation among top 100 US Largest Stocks",  
-    "manual": "cannot see the links, just grab a stock and pull it away.",
+    "manual": "cannot see the links, just grab a stock and pull it away. Double click to zoom in",
     "nodes": [      
             {"id": "AAPL"}, {"id": "ABBV"}, {"id": "ABT"},
             {"id": "ACN"}, {"id": "AGN"}, {"id": "AIG"}, 
