@@ -16,12 +16,28 @@ var products = [
     ]
   },
   {
+    name: 'Big Data Machine Learning, Distributed Machine Learning, Parallel Machine Learning',
+    link: 'cs/bigLearn.html',
+    completeness: '[in progess]',
+    properties: [
+      { name:'Computer Science', value:'High Performance' },  
+      { name:'Computer Science', value:'Machine Learning' },  
+    ]
+  },
+  {
     name: 'Machine Learning, Neural Network, Deep Learning, Reinforcement Learning',
     link: 'cs/machineLearning.pdf',
     properties: [
       { name:'Computer Science', value:'Machine Learning' },    
     ]
-  },
+  },   
+  {
+    name: 'Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks',
+    link: 'cs/deepLearn.html',
+    properties: [
+      { name:'Computer Science', value:'Machine Learning' },    
+    ]
+  },   
   {
     name: 'Microsoft C# Specialist Certification',
     link: 'cs/csCer.pdf',
