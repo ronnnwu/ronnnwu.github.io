@@ -17,8 +17,7 @@ var products = [
   },
   {
     name: 'Big Data Machine Learning, Distributed Machine Learning, Parallel Machine Learning',
-    link: 'cs/bigLearn.html',
-    completeness: '[in progess]',
+    link: 'cs/bigLearn.html', 
     properties: [
       { name:'Computer Science', value:'High Performance' },  
       { name:'Computer Science', value:'Machine Learning' },  
