@@ -16,14 +16,6 @@ var products = [
     ]
   },
   {
-    name: 'Big Data Machine Learning, Distributed Machine Learning, Parallel Machine Learning',
-    link: 'cs/bigLearn.html', 
-    properties: [
-      { name:'Computer Science', value:'High Performance' },  
-      { name:'Computer Science', value:'Machine Learning' },  
-    ]
-  },
-  {
     name: 'Machine Learning, Neural Network, Deep Learning, Reinforcement Learning',
     link: 'cs/machineLearning.pdf',
     properties: [
@@ -31,12 +23,37 @@ var products = [
     ]
   },   
   {
-    name: 'Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks',
+    name: 'Deep Learning, Convolutional Neural Networks, Recurrent Neural Networks (notebook)',
     link: 'cs/deepLearn.html',
     properties: [
       { name:'Computer Science', value:'Machine Learning' },    
     ]
-  },   
+  }, 
+  {
+    name: 'Deep Reinforcement Learning (notebook)',
+    link: 'cs/rlLearn.html',
+    completeness: '[in progess]',
+    properties: [
+      { name:'Computer Science', value:'Machine Learning' },    
+    ]
+  }, 
+  {
+    name: 'Big Data Machine Learning, Distributed Machine Learning, Parallel Machine Learning (notebook)',
+    link: 'cs/bigLearn.html', 
+    properties: [
+      { name:'Computer Science', value:'High Performance' },  
+      { name:'Computer Science', value:'Machine Learning' },  
+    ]
+  }, 
+  {
+    name: 'Quantum Machine Learning, Tensor Networks, Quantum Information and Quantum Gravity (notebook)',
+    link: 'cs/quantumLearn.html',
+    completeness: '[in progess]',
+    properties: [
+      { name:'Computer Science', value:'Machine Learning' },  
+      { name:'Computer Science', value:'High Performance' },    
+    ]
+  },  
   {
     name: 'Microsoft C# Specialist Certification',
     link: 'cs/csCer.pdf',
