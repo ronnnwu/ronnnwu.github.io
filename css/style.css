@@ -918,7 +918,16 @@ Project content panel
 
 }
 
+.image-circle {
+    width: 45%
+}
+
 @media only screen and (min-width: 900px) {
+
+  .image-circle {
+    width: 25%
+  }
+
   .cd-project-content h2 {
     font-size: 6rem;
   }
