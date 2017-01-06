@@ -72,7 +72,7 @@
 					<img src="img/pj4.jpg" alt="project image">
 					<div class="project-info">
 						<h2>Miscellaneous</h2>
-						<p>Hackathon, Code Exercise, Youtube Physics</p>
+						<p>Competition, Hackathon, Code Exercise, Youtube Physics</p>
 					</div>
 				</a>
 			</li>
@@ -240,11 +240,36 @@ config(p, displayModeBar=FALSE)</code></pre>
 
 	<div class="cd-project-content" id="project-4">
 		<div>
+			<h3>Competition</h3>
+			<em>1. Kaggle Machine Learning Contest</em>
+
+			<p>
+				Currently, I am working on the Kaggle 2-sigma contest. I created this Shiny app (written in R) for data exploratory analysis. The app can be opened by clicking the pic below. 
+			</p>
+			<p style="text-align:center">
+			<a href="https://ronnnwu.shinyapps.io/shiny_2sigma_contest/"  target="_blank"><img   src="img/sigma.png"  alt="project image"></a>
+			</p> 
+			<p>
+				The app is running on shinyapps.io, which only has 25 hours free run-time per month, so be considerate. Please close the browser, when you are done with it. If you need more time, please use the source code provided <a href="https://github.com/ronnnwu/shinyStockApp/blob/master/app.R" target="_blank" >here</a> and download the dataset from kaggle, and run the app locally on your computer.
+			</p>
+
+			<em>2. Hackerrank Programming Contest</em>
+
+			<p>
+				Recently I entered contests on Hackerrank. Through the contests, I have learned to not only code fast, but more importantly to think hard and use math tricks to reduce the algorithm complexity. Along the way, I have learned some auxiliary data structures. 
+			</p>
+			<p> 
+				As of January 2017, I rank number 2 on Hackerrank among Columbia programmers, also rank number 2 among NYU programmers. The ranking can be found <a href="https://www.hackerrank.com/leaderboard/algorithms/contest/level/2/filter/school=Columbia%20University,%20New%20York/page/1" target="_blank" >here</a>.  
+
+			<p style="text-align:center">
+			<a href="https://www.hackerrank.com/leaderboard/algorithms/contest/level/2/filter/school=Columbia%20University,%20New%20York/page/1"  target="_blank"><img   src="img/hackerrank.png"  alt="project image"></a>
+			</p> 
+
 			<h3>Hackathon</h3>
 			<em>1. Quantopian Alpha Hackathon 2016</em>
 
 			<p>
-				 According to <a href="http://quantpedia.com/Screener?Page=1&FilterPerformance=Over%2040%25" target="_blank">Quantpedia</a>, "Reversal During Earnings Announcements" and "Reversal in Post-Earnings Announcement Drift" are the only few strategies that have yearly return over 40%. The focus of this year's Quantopian <a href="https://www.quantopian.com/posts/december-10th-quantopian-hackathon-trading-on-earnings" target="_blank">Alpha Hackathon</a> was centered around earnings. Our team built a trading algorithm, originated from <a href = "https://www.quantopian.com/posts/3-earnings-example-strategies-based-on-the-quantpedia-trading-strategy-series" target="_blank">Mr. Seong Lee's algo</a>. Our algo reached 560% returns from the 8-year period, 2007-2014, in comparison to SP500, which only grew 70% during the period.
+				 According to <a href="http://quantpedia.com/Screener?Page=1&FilterPerformance=Over%2040%25" target="_blank">Quantpedia</a>, "Reversal During Earnings Announcements" and "Reversal in Post-Earnings Announcement Drift" are the only few strategies that have yearly return over 40%. The focus of this year's Quantopian <a href="https://www.quantopian.com/posts/december-10th-quantopian-hackathon-trading-on-earnings" target="_blank">Alpha Hackathon</a> was centered around earnings. I built a trading algorithm, originated from <a href = "https://www.quantopian.com/posts/3-earnings-example-strategies-based-on-the-quantpedia-trading-strategy-series" target="_blank">Mr. Seong Lee's algo</a>. Our algo reached 560% returns from the 8-year period, 2007-2014, in comparison to SP500, which only grew 70% during the period.
 			</p>
 
  			<p style="text-align:center">
@@ -260,7 +285,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 				 It is well-known that tasks that are difficult for human beings are usually very easy for computers and tasks that are very difficult for computers are easy for human beings. For example graph partitioning is NP-hard, but very easy for humans because we can just see it. 
 				 </p>
 				 <p>
-				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, our team used graph theory to build networks of asset classes (stocks, index funds, commodities, economic indicators, ...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
+				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, I used graph theory to build networks of asset classes (stocks, index funds, commodities, economic indicators, ...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
 				</p><p>
 				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we let the coefficient of determination (r-square of linear regression) as the new edge weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the edge new weight or combining many weights to one edge weight like boosting. 
 				</p><p>
@@ -276,10 +301,10 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<em>3. Columbia DevFest Hackathon 2016</em>  
 
 			<p> 
-				In the wake of hacking activities across the nation and sharing information securely is at the greatest dangerous ever, our team participated in the <a href="http://devfe.st/" target="_blank" >App Hackathon</a>, and we wanted to build a safest social network site. 
+				In the wake of hacking activities across the nation and sharing information securely is at the greatest dangerous ever, I participated in the <a href="http://devfe.st/" target="_blank" >App Hackathon</a>, and we wanted to build a safest social network site. 
 			</p>
 			<p>
-				The idea was that a safer way to share messages was to use no encryption and no personal information attached to it. Our app allows user to go to our website and claim alias, then post the message there and give his alias to the people he wants to share the message with. His friends will go to our site to read the message without a password, and the alias will expire and become available  for other users to claim in 2 days if the original creator of the alias doesn't login for the period of time.
+				The idea was that a safer way to share messages was to use no encryption and no personal information attached to it. The app allows user to go to our website and claim alias, then post the message there and give his alias to the people he wants to share the message with. His friends will go to our site to read the message without a password, and the alias will expire and become available  for other users to claim in 2 days if the original creator of the alias doesn't login for the period of time.
 			</p>
 			<p>
 				The source code can be found <a href="https://github.com/mgandham/modsecure" target="_blank" >here</a>, and the site can be opened <a href="http://www.modsecure.com" target="_blank" >here</a>.
