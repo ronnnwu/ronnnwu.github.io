@@ -239,8 +239,8 @@ config(p, displayModeBar=FALSE)</code></pre>
 			</p> 
 			<p>	
 				<a href="note/pdf/phys/mp/kick_off.pdf" target="_blank">Quantum Computing: Intro, logistics (3.2.17)</a>
-			</p>
-			<p>	
+			<br>
+			 
 				<a href="note/pdf/phys/mp/quantum_calculation.pdf" target="_blank">Quantum Calculations: Matrix Product States (3.11.17)</a>
 			</p>
 
@@ -251,10 +251,19 @@ config(p, displayModeBar=FALSE)</code></pre>
 	<div class="cd-project-content" id="project-4">
 		<div>
 			<h3>Competition</h3>
-			<em>1. Kaggle Machine Learning Contest</em>
+			<em>1. Hackerrank Competitive Programming</em>
+ 
+			<p> 
+				Being a O(1) programmer on Hackerrank, as of March 2017, I rank #773 in the world, #111 in United States and rank #2 among Columbia students. 
+
+			<p style="text-align:center">
+			<a href="https://www.hackerrank.com/leaderboard?school=Columbia+University%2C+New+York"  target="_blank"><img   src="img/hackerrank.png"  alt="project image"></a>
+			</p> 
+
+			<em>2. Kaggle Machine Learning Contest</em>
 
 			<p>
-				I finished the Kaggle 2-sigma global contest in the 29th place (silver medal).
+				I finished the Kaggle 2-sigma global contest in the 29th place (silver medal) against 2000+ data scientists.
 			</p>
 			<p style="text-align:center">
 			<a href="https://www.kaggle.com/c/two-sigma-financial-modeling/leaderboard"  target="_blank"><img   src="img/sigma_lb.png"  alt="project image"></a>
@@ -268,19 +277,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 			<p>
 				To run it locally, use the source code provided <a href="https://github.com/ronnnwu/shinyStockApp/blob/master/app.R" target="_blank" >here</a> and download the dataset from kaggle. Later I have added more functionalities, such as corr(), lagging(), unit root, spectrogram, kalman, roll mean, exp smoothing, etc.
 			</p>
-
-			<em>2. Hackerrank Programming Contest</em>
-
-			<p>
-				Recently I entered contests on Hackerrank. Through the contests, I have learned to not only code fast, but more importantly to think hard and use math tricks to reduce the algorithm complexity. Along the way, I have learned some auxiliary data structures. 
-			</p>
-			<p> 
-				As of March 2017, I rank #3 on Hackerrank among Columbia students. 
-
-			<p style="text-align:center">
-			<a href="https://www.hackerrank.com/leaderboard/algorithms/contest/level/2/filter/school=Columbia%20University,%20New%20York/page/1"  target="_blank"><img   src="img/hackerrank.png"  alt="project image"></a>
-			</p> 
-
+ 
 			<h3>Hackathon</h3>
 			<em>1. Quantopian Alpha Hackathon 2016</em>
 
@@ -301,7 +298,7 @@ config(p, displayModeBar=FALSE)</code></pre>
 				 It is well-known that tasks that are difficult for human beings are usually very easy for computers and tasks that are very difficult for computers are easy for human beings. For example graph partitioning is NP-hard, but very easy for humans because we can just see it. 
 				 </p>
 				 <p>
-				 Participated in the <a href="http://www.columbia.dsschack.com/" target="_blank" >Data Hackathon</a>, I used graph theory to build networks of asset classes (stocks, index funds, commodities, economic indicators, ...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
+				 Participated in the Data Hackathon, I used graph theory to build networks of asset classes (stocks, index funds, commodities, economic indicators, ...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
 				</p><p>
 				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we let the coefficient of determination (r-square of linear regression) as the new edge weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the edge new weight or combining many weights to one edge weight like boosting. 
 				</p><p>
