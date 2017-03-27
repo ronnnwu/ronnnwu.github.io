@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<!--template from https://codyhouse.co/demo/squeezebox-portfolio-template/index.html -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/theme.css"  type="text/css">
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Ron Wu | Portfolio</title>
+</head>
+<body>
+	<div class="cd-intro-block">
+		<div class="content-wrapper">
+			<h1>
+			<div align="center">
+			    <div class = "image-circle">
+					<a href="img/groupframe.jpg"><div class="circle"  style="background-image:url(img/group.jpg)"> 
+	            	</div>
+	            	</a>
+				</div>
+			</div>
+			<span class="wrap">Ron
+				<span class="tooltip">contact:<br>roncwu@gmail.com
+				</span>
+			</span> ~ <a href="#0" data-action="show-projects" class="bt1">Projects</a> ~ <a href="note/index.html" class="bt2">Notes</a> </h1>		
+
+				
+
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<ul class="cd-slider">
+			<li class="current">
+				<a href="#project-1">
+					<img src="img/pj1.jpg" alt="project image">
+					<div class="project-info">
+						<h2>Finance</h2>
+						<p>Algorithmic Trading, Paper-Money Trading, Computational Finance</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#project-2">
+					<img src="img/pj2.jpg" alt="project image">
+					<div class="project-info">
+						<h2>Machine Learning</h2>
+						<p>High Energy Physics</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#project-3">
+					<img src="img/pj3.jpg" alt="project image">
+					<div class="project-info">
+						<h2>Numerical Methods</h2>
+						<p>Fusion Physics</p>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a href="#project-4">
+					<img src="img/pj4.jpg" alt="project image">
+					<div class="project-info">
+						<h2>Miscellaneous</h2>
+						<p>Competition, Hackathon, Code Exercise, Youtube Physics</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="cd-slider-navigation">
+			<li><a href="#0" class="prev inactive"></a></li>
+			<li><a href="#0" class="next"></a></li>
+		</ul> <!-- .cd-slider-navigation -->
+	</div> <!-- .cd-projects-wrapper -->
+
+	<div class="cd-project-content" id="project-1">
+
+		<div>
+			<h2>Finance</h2>
+			<em>1. Algorithmic Trading</em>
+			<p>The following is a backtest of my mean-reversion algorithm from <a href="https://www.quantopian.com/" target="_blank">Quantopian</a>. It rebalances weekly, longing previous week worst preformed (bottom 10%) of liquid stocks and shorting best preformed stocks. During the backtest period: 2015-03 to 2016-04, it consistently outperformed benchmark, and it had low beta and low volatility.
+			</p>
+			<p text-align: center >
+				<iframe src="proj/finance/backtest.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
+				</iframe>
+			</p>
+
+<pre><code data-language="python">#liquid securities 
+low_returns = recent_returns.percentile_between(0,10,mask=high_dollar_volume)
+high_returns = recent_returns.percentile_between(90,100,mask=high_dollar_volume)
+
+#For each security in the universe, order long or short positions with equal weights
+    if data.can_trade(stock):
+        if stock in context.long_secs.index:
+            order_target_percent(stock, context.long_weight)
+        elif stock in context.short_secs.index:
+            order_target_percent(stock, context.short_weight)
+</code></pre>		
+
+
+			<p>There are many advanced techniques out there that are often supplements to the simple mean-reversion and momentum strategies: (check them out in my other project categories) </p>
+
+			<P>&#9658; Machine Learning: <a href="https://www.psychsignal.com/" target="_blank">PsychSignal</a>'s stockTwits trader mood, run Twitter feed in <a href="https://www.alchemyapi.com/" target="_blank">Alchemy</a> api (NLP), chart/data pattern recognition &amp; categorization (supervised/unsupervised learning).</P>
+
+			<p>&#9658; Numerical Methods: modern portfolio theory, dynamic mode decomposition (PCA), random matrix theory.
+			</p>
+
+			<p>&#9658; Web/App design: using Python, C++, C#, R, SQL, and JavaScript, I built high-quality financial apps for portfolio  manager and traders to automate their works.</p>
+
+
+			<em>2. Paper-Money Option Trading</em>
+			<p>	While learning portfolio theory, I created trading algorithms; while learning derivatives, I traded paperMoney options from <a href="https://www.tdameritrade.com/" target="_blank">TD Ameritrade</a>. 
+			</p>
+			<p>
+				<img src="proj/finance/aapl.png">
+			</p>
+			<p>
+				As of 5/25/16, after a week of straight breakout descending triangle, AAPL is on the rise. The 100 call monthly's ATM is traded at $1.76, expiring in 3 weeks' time.  One can also sell out of money call option to make a bull spread taking advantage of the low VIX environment.
+			</p>
+			<p>
+				As of 06/07/16, during the last 2 weeks, AAPL didn't rise to $100-$103 range that I anticipated. The day after I bought the $100 call and sold $105 call, AAPL had 1% gain, which could bring in 31% profit on a single day. However, things went South after Memorial weekend, compounded by negative Theta, as it got closer to the expiry. I closed the $100 call after Memorial 6/1. I ended losing (1.1 - 1.7) / 1.7 = - 35% on the $100 calls. Looking forward I can probably let the $105 calls expire and mitigate losses to (1.1 + .34 - 1.7) / 1.7 = - 15%.
+			</p>
+			<p>
+				A few lessons I learned from this case: cashing in profits quickly; paying more attention to the calendar dynamics -- 2 weeks before the expiry is too much a burden to bear; never executing naked options; documenting what leads to the trading decisions and making reflections on what worked and did not.  
+			</p>
+
+
+			<em>3. Computational Finance</em>
+			<p>
+				With deep understanding of numerical analysis, PDE, machine learning, statistics and probability theory, I wrote computational algorithms to meet both accuracy and speed. 
+			</p>
+			<p>
+				Being familiar with many popular computational toolboxes and libraries, as a risk analyst, I compute metrics and present them in graphs. In the graph below, I used <a href="https://www.plot.ly/r/" target="_blank">Plotly</a> to make an interactive graph. 
+			</p>
+			<p text-align: center >
+				<iframe src="proj/finance/unemply.html" height="250" width="100% !important;"  scrolling="no" seamless="seamless" frameBorder="0">
+				</iframe>
+			</p>
+			
+<pre><code data-language="r">library(plotly)
+p <- plot_ly(economics, x = date, y = 100*unemploy / pop, name = "unemply rate") %>% 
+      add_trace(y = fitted(loess(100*unemploy / pop ~ as.numeric(date))),
+                x = date, name="trend") %>%
+      layout(title="Unemployment")
+config(p, displayModeBar=FALSE)</code></pre>
+				
+		
+			<em>4. My Notes</em>
+			<p>
+				&#9658; <a href="note/pdf/finance/computeFinance.pdf" target="_blank">Statistics, Time Series, Computation Finance, Derivative Pricing, Algorithmic Trading</a>
+			</p>
+			<p>
+				&#9658; <a href="note/pdf/cs/dataStructure.pdf" target="_blank">ADT, OOP &amp; Algorithm, Design Patterns, Software Testing, Compiler Language, Operating System</a>
+				</p>
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+
+	<div class="cd-project-content" id="project-2">
+		<div>
+			<h2>Machine Learning</h2>
+
+			<em>1. HEP meets ML</em>
+			<p>
+				The Large Hadron Collider (LHC) in Geneva, Switzerland is the single largest machine in the world. The main mission of LHC is to detect new particles and search for new physics beyond the standard model. Not only does the machine produce unmanageable quantities of data, but also the measurements themselves such as impact parameter, momentum, are indeterministic. In terms of machine learning HMM language, the latent states (unobservable short life quantum intermediate processes) are not the same as the observables. Figuring out what is noise and what isn't becomes the essential task. Thus no wonder why statistics and machine learning have to be the central tools for analysis.
+            	</p>
+
+			<p text-align: center >
+				<iframe src="proj/learning/MLmeetHEP.html" height="500" width="100% !important;" scrolling="yes" seamless="seamless" frameBorder="0">
+				</iframe>
+			</p>
+
+            	<p>
+            		To learn more about how ML meets HEP, watch this <a href="https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Machine-Learning-and-Likelihood-Free-Inference-in-Particle-Physics" target="_blank">talk</a> by Kyle Cranmer (NYU), who was an invited speaker of the 2016 <a href="https://nips.cc/" target="_blank">NIPS</a> conference. While studying under Prof. Cranmer, I wrote a report describing jet algorithm and simulation algorithm. It can be found <a href="proj/learning/HEPreport.pdf" target="_blank">here</a>.
+            	</p> 
+ 
+
+			<em>2. My Notes</em>
+			<p>
+				&#9658; [Theory] <a href="note/pdf/cs/machineLearning.pdf" target="_blank">Machine Learning, Neural Network, Deep Learning, Reinforcement Learning, Artificial Intelligence</a>
+			</p>
+			<p>
+				&#9658; [Practice] <a href="https://nbviewer.jupyter.org/github/ronnnwu/DistributedDeepLearning/blob/master/DeepLearn.ipynb"  target="_blank">Convolutional Neural Networks for Image Processing, Recurrent Neural Networks for Natural Language Processing with TensorFlow</a>
+			</p>
+
+			<p>
+				&#9658; [Practice] <a href="https://nbviewer.jupyter.org/github/ronnnwu/DistributedDeepLearning/blob/master/DeepRL.ipynb"  target="_blank">Deep Reinforcement Learning with TensorFlow [in progress]</a>
+			</p>
+
+		</div>
+	<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+
+	<div class="cd-project-content" id="project-3">
+		<div>
+			<h2>Numerical Methods</h2>
+
+			<em>1. Fusion Energy</em>
+			<p>
+				Nuclear fusion plants are being experimentally built around the world. Fusion energy may become one of the most promising energy resources, by generating an infinitely amount of sustainable energy, while producing 100 times less radiative wastes than existing nuclear power plants, all of which are powered by fission. In contrast to fission's deadly reactant, Uranium, fusion uses stable and safe hydrogen. 
+			</p>  
+
+ 			<p style="text-align:center">
+			<a href="proj/computing/Fusion_Slides.pdf" target="_blank"><img   src="img/Fslides.jpg"  alt="project image"></a>
+			</p>
+			<p>
+				Trying to tackle some of the technical challenges surrounding fusion devices, my advisor and I proposed a new algorithm for drawing 3D magnetic fields lines inside of reactors and for determining if the magnetic configurations were controllable or not. In the research, we developed a new algorithmic substitute to Runge-Kutta, by modifying Lax-Friedrichs sweeping method, which linked Courant stability in numerical analysis to the physical stability of the magnetic configurations inside of the reactors.
+			</p>
+			<p>
+				Such project was a perfect fit for me, since it demanded a combined comprehension of advanced physics, rigorous mathematics and computation efficiency. The slides are provided <a href="proj/computing/Fusion_Slides.pdf" target="_blank">here</a> and the paper can be read <a href="proj/computing/thesis.pdf" target="_blank">here</a>.
+			</p>
+			  
+
+			<em>2. My Notes</em>
+			<p>
+				&#9658; [Theory] <a href="note/pdf/cs/numericalAnaylsis.pdf" target="_blank">Numerical Analysis, High Performance Computing, Big Data, Quantum Computing</a>
+			</p>			
+			<p>
+				&#9658; [Practice] <a href="https://nbviewer.jupyter.org/github/ronnnwu/DistributedDeepLearning/blob/master/BigLearn.ipynb" target="_blank">Big Data Machine Learning, Distributed Machine Learning, Parallel Machine Learning with Scala, Spark</a>
+			</p>
+
+			<p>
+				&#9658; [Practice] <a href="https://nbviewer.jupyter.org/github/ronnnwu/DistributedDeepLearning/blob/master/QuantumLearn.ipynb" target="_blank">Quantum Computing on the Cloud, Quantum Machine Learning, Quantum Neural Network (Tensor Networks), Quantum Information Science and AdS/CFT Correspondence of Quantum Gravity [in progress]</a>
+			</p>
+			<em>3. Quantum MeetUp Notes</em>
+			<p>
+				I am a regular member of NY Quantum Computing and NY Quantum Theory Meetup Groups. The groups consist of computer scientists, mathematicians and physicists. We discuss the latest developing in the fields and what they can be applied to improve our business. 
+			</p> 
+			<p>	
+				<a href="note/pdf/phys/mp/kick_off.pdf" target="_blank">Quantum Computing: Intro, logistics (3.2.17)</a>
+			<br>
+			 
+				<a href="note/pdf/phys/mp/quantum_calculation.pdf" target="_blank">Quantum Calculations: Matrix Product States (3.11.17)</a>
+			</p>
+
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+
+	<div class="cd-project-content" id="project-4">
+		<div>
+			<h3>Competition</h3>
+			<em>1. Hackerrank Competitive Programming</em>
+ 
+			<p> 
+				Being a O(1) programmer on Hackerrank, as of March 2017, I rank #773 in the world, #111 in the United States and rank #2 among Columbia students. 
+
+			<p style="text-align:center">
+			<a href="https://www.hackerrank.com/leaderboard?school=Columbia+University%2C+New+York"  target="_blank"><img   src="img/hackerrank.png"  alt="project image"></a>
+			</p> 
+
+			<em>2. Kaggle Machine Learning Contest</em>
+
+			<p>
+				I finished the Kaggle 2-sigma global contest in the 29th place (silver medal) against 2000+ data scientists.
+			</p>
+			<p style="text-align:center">
+			<a href="https://www.kaggle.com/c/two-sigma-financial-modeling/leaderboard"  target="_blank"><img   src="img/sigma_lb.png"  alt="project image"></a>
+			</p> 
+			<p>
+				I created this Shiny app (written in R) for data exploratory analysis. The app can be opened by clicking the pic below. 
+			</p>
+			<p style="text-align:center">
+			<a href="https://ronnnwu.shinyapps.io/shiny_2sigma_contest/"  target="_blank"><img   src="img/sigma.png"  alt="project image"></a>
+			</p> 
+			<p>
+				To run it locally, use the source code provided <a href="https://github.com/ronnnwu/shinyStockApp/blob/master/app.R" target="_blank" >here</a> and download the dataset from kaggle. Later I have added more functionalities, such as corr(), lagging(), unit root, spectrogram, kalman, roll mean, exp smoothing, etc.
+			</p>
+ 
+			<h3>Hackathon</h3>
+			<em>1. Quantopian Alpha Hackathon 2016</em>
+
+			<p>
+				 According to <a href="http://quantpedia.com/Screener?Page=1&FilterPerformance=Over%2040%25" target="_blank">Quantpedia</a>, "Reversal During Earnings Announcements" and "Reversal in Post-Earnings Announcement Drift" are the only few strategies that have yearly return over 40%. The focus of this year's Quantopian <a href="https://www.quantopian.com/posts/december-10th-quantopian-hackathon-trading-on-earnings" target="_blank">Alpha Hackathon</a> was centered around earnings. I built a trading algorithm, originated from <a href = "https://www.quantopian.com/posts/3-earnings-example-strategies-based-on-the-quantpedia-trading-strategy-series" target="_blank">Mr. Seong Lee's algo</a>. Our algo reached 560% returns from the 8-year period, 2007-2014, in comparison to SP500, which only grew 70% during the period.
+			</p>
+
+ 			<p style="text-align:center">
+			<a href="proj/quanto/backtest.html" target="_blank"><img   src="proj/quanto/quantoHack.png"  alt="project image"></a>
+			</p> 
+			<p>
+				 The central idea of our strategy was PEAD + Buffett doctrine("Diversification is protection against ignorance"). Our portfolio had 50% in cash (and keep leverage under 1) most of the time, so that when opportunity came we would make all-in to the stocks that passed our very stringent tests, and quickly cashed in profits. In the end, our portfolio had very low correlation to the market, strong protection against crisis, and relatively acceptable volatility. A full backtest result can be found <a href="proj/quanto/backtest.html" target="_blank" >here</a>.
+			</p>
+
+ 			<em>2. Columbia DataScience Hackathon 2016</em>
+
+			<p>
+				 It is well-known that tasks that are difficult for human beings are usually very easy for computers and tasks that are very difficult for computers are easy for human beings. For example graph partitioning is NP-hard, but very easy for humans because we can just see it. 
+				 </p>
+				 <p>
+				 Participated in the Data Hackathon, I used graph theory to build networks of asset classes (stocks, index funds, commodities, economic indicators, ...) and depicting relationship among them. The graph will help to narrow to the factors that are most related to the assets.
+				</p><p>
+				 How to define relationships? The easiest one was Pearson correlation, which gave us a bidirectional graph. After that, we borrowed the idea of autoregression but we used historical data of other stocks to predict stocks, then we let the coefficient of determination (r-square of linear regression) as the new edge weight, which we called it the predicting power, which gave us a directed graph. Many other machine learning algorithms can also be used. The accuracy score of each algorithm is the edge new weight or combining many weights to one edge weight like boosting. 
+				</p><p>
+				 The project is just a beginning. We can go beyond one-step prediction and move to multi-step, i.e. deep learning and looking for hidden layers. In doing so, better indicators may be formed or better financial instruments may be structured. 
+				 The source code can be found <a href="http://nbviewer.jupyter.org/github/ronnnwu/Bloomberg_data_hackathon/blob/master/bl.ipynb" target="_blank" >here</a>, and a NetJSON visualization can be opened by clicking the image below.
+			</p>
+
+ 			<p style="text-align:center">
+			<a href="proj/bIdata/index.html" target="_blank"><img   src="img/bloom.jpg"  alt="project image"></a>
+			</p>
+			<p>
+
+			<em>3. Columbia DevFest Hackathon 2016</em>  
+
+			<p> 
+				In the wake of hacking activities across the nation and sharing information securely is at the greatest dangerous ever, I participated in the <a href="http://devfe.st/" target="_blank" >App Hackathon</a>, and we wanted to build a safest social network site. 
+			</p>
+			<p>
+				The idea was that a safer way to share messages was to use no encryption and no personal information attached to it. The app allows user to go to our website and claim alias, then post the message there and give his alias to the people he wants to share the message with. His friends will go to our site to read the message without a password, and the alias will expire and become available  for other users to claim in 2 days if the original creator of the alias doesn't login for the period of time.
+			</p>
+			<p>
+				The source code can be found <a href="https://github.com/mgandham/modsecure" target="_blank" >here</a>, and the site can be opened <a href="http://www.modsecure.com" target="_blank" >here</a>.
+			</p>
+
+
+			<h3>Coding Exercise</h3>
+			<p>
+				Exercises from Gayle Laakmann McDowell's book <a href="http://www.crackingthecodinginterview.com/" target="_blank">Cracking the Coding Interview</a>. The official Python solution were missing a few chapters, so I made it complete. Your comments or pointing out mistakes are highly valuable and I can be reached at <a href="mailto:roncwu@gmail.com">roncwu@gmail.com</a>.
+			</p>
+			<p>
+				<u>Data Structures</u> 
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch1.ipynb" target="_blank">Chapter 1: Arrays &amp; Strings</a>
+			
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch2.ipynb" target="_blank">Chapter 2: Linked Lists</a>
+				
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch3.ipynb" target="_blank">Chapter 3: Stacks and Queues</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch4.ipynb" target="_blank">Chapter 4: Tree and Graphs</a>
+
+				</p>
+				<p>
+			
+				<u>Algorithms</u>
+
+				<br>
+			
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch5.ipynb" target="_blank">Chapter 5: Bit Manipulation</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch6.ipynb" target="_blank">Chapter 6: Math and Logic Puzzles</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch7.ipynb" target="_blank">Chapter 7: Object-Oriented Design</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch8.ipynb" target="_blank">Chapter 8: Recursion and Dynamic Programming</a>
+
+
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch9.ipynb" target="_blank">Chapter 9: System Design and Scalability</a>
+
+     			<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch10.ipynb" target="_blank">Chapter 10: Sorting and Searching</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch11.ipynb" target="_blank">Chapter 11: Testing</a>
+
+
+				</p>
+				<p>
+				<u>Language Specifics</u>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch12.ipynb" target="_blank">Chapter 12: C++</a>
+
+					<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch13.ipynb" target="_blank">Chapter 13: Java</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch14.ipynb" target="_blank">Chapter 14: SQL</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch15.ipynb" target="_blank">Chapter 15: Threads, Locks</a>
+
+				</p>
+<!--				<p>
+				<u>Comprehensive</u>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch16.ipynb" target="_blank">Chapter 16: Moderate</a>
+
+				<br>
+
+				<a href="http://nbviewer.jupyter.org/github/ronnnwu/codetheInterviewExercises/blob/master/Ch17.ipynb" target="_blank">Chapter 17: Hard</a>
+
+				<br>
+				
+			</p>-->
+			<h3>YouTube Videos</h3>
+
+			<em>How Things Are Made by Physics?</em>  
+
+			<p> 
+				When I was a physics tutor at Columbia, I created series of videos to reach out to students to promote physics and to promote my tutoring business. Below was the first video of the series, made around thanksgiving in 2014. 
+			</p>
+			<p>
+			<div align="center" >
+				<iframe width="500"
+		            height="400"
+		            src="https://www.youtube.com/embed/MevAj8B9zy4?showinfo=0&color=white&theme=light&rel=0&autoplay=0"
+		            frameborder="0"
+		            allowfullscreen>
+				</iframe> </div>
+
+			</p>
+
+		</div>
+		<a href="#0" class="close cd-img-replace">Close</a>
+	</div> <!-- .cd-project-content -->
+
+
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/rainbow.min.js"></script>
+<script src="js/generic.js"></script>
+<script src="js/r.js"></script>
+<script src="js/python.js"></script>
+
+</body>
+</html>
