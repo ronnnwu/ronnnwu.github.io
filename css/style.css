@@ -87,12 +87,7 @@ and (max-width: 868px) {
   header .navbar-collapse.in {
     background-color: rgba(0,0,0, .5);
   }
-  #carousel-example-generic h2 {
-    font-size:12px
-  }
-  #carousel-example-generic{
-    font-size:12px
-  }
+
 }
 
 /**  nav inbody **/
@@ -377,6 +372,12 @@ and (max-width: 768px) {
       z-index: 1; 
       height:100%;  
       vertical-align: middle;
+  }
+  #carousel-example-generic h2 {
+    font-size:11px
+  }
+  #carousel-example-generic{
+    font-size:11px
   }
 }
 @media only screen and (min-width: 900px) {
