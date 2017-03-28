@@ -364,13 +364,18 @@ and (max-width: 768px) {
  
 
 @media only screen and (max-width: 900px) and (min-width: 550px) {
-
+  #carousel-example-generic h2 {
+    font-size:13px
+  }
+  #carousel-example-generic{
+    font-size:13px
+  }
 }
 
 @media only screen and (max-width: 550px) {
     .carousel-caption { 
       z-index: 1; 
-      height:100%;  
+      height:98%;  
       vertical-align: middle;
   }
   #carousel-example-generic h2 {
