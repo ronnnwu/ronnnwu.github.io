@@ -361,6 +361,11 @@ and (max-width: 768px) {
   content: '';
 }
  
+ .carousel-caption { 
+    z-index: 1; 
+    height:90%;  
+    vertical-align: middle;
+}
 
  
 /**  Footer **/
