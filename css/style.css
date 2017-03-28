@@ -382,7 +382,13 @@ and (max-width: 768px) {
       z-index: 1; 
       height:85%;  
       vertical-align: middle;
-  } 
+  }
+  #carousel-example-generic h3 {
+    font-size:13px
+  }
+  #carousel-example-generic{
+    font-size:13px
+  }
   .carousel-indicators li { visibility: hidden; }
 }
 @media only screen and (min-width: 900px) {
