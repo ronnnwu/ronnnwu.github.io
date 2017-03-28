@@ -370,7 +370,7 @@ and (max-width: 768px) {
  
 
 .carousel-inner img{
-   height:100% !important
+   height:100%  
 }
 
 @media only screen and (max-width: 900px) and (min-width: 550px) {
