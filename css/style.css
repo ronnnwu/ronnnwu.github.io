@@ -147,8 +147,7 @@ header .inbody .navbar-brand span.subhead {
   opacity: 1;
 }
 
-.carousel-control {
-  opacity: 0;
+.carousel-control { 
   visibility: visible;
 }
 
