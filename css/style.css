@@ -367,6 +367,21 @@ and (max-width: 768px) {
     vertical-align: middle;
 }
 
+@media only screen and (max-width: 900px) and (min-width: 550px) {
+ .carousel-caption { 
+    z-index: 1; 
+    height:100%;  
+    vertical-align: middle;
+}
+}
+
+@media only screen and (max-width: 550px) {
+ 
+}
+@media only screen and (min-width: 900px) {
+ 
+}
+
  
 /**  Footer **/
 
