@@ -147,8 +147,8 @@ header .inbody .navbar-brand span.subhead {
   opacity: 1;
 }
 
-.carousel-control {
-  opacity: 0;
+.carousel-control { 
+  visibility: visible;
 }
 
 .carousel-control.right,
@@ -235,6 +235,12 @@ and (min-width: 450px)
 and (max-width: 768px) {
   .service p {
     padding: 0 20%;
+  }
+  #carousel-example-generic h3 {
+    font-size:12px
+  }
+  #carousel-example-generic{
+    font-size:12px
   }
 }
 
@@ -358,27 +364,22 @@ and (max-width: 768px) {
  
  .carousel-caption { 
     z-index: 1; 
-    height:90%;  
+    height:85%;  
     vertical-align: middle;
 }
  
 
 @media only screen and (max-width: 900px) and (min-width: 550px) {
-  #carousel-example-generic h2 {
-    font-size:13px
-  }
-  #carousel-example-generic{
-    font-size:13px
-  }
+  
 }
 
 @media only screen and (max-width: 550px) {
     .carousel-caption { 
       z-index: 1; 
-      height:98%;  
+      height:90%;  
       vertical-align: middle;
   }
-  #carousel-example-generic h2 {
+  #carousel-example-generic h3 {
     font-size:11px
   }
   #carousel-example-generic{
