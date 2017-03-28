@@ -376,7 +376,7 @@ and (max-width: 768px) {
 @media only screen and (max-width: 550px) {
     .carousel-caption { 
       z-index: 1; 
-      height:90%;  
+      height:93%;  
       vertical-align: middle;
   }
   #carousel-example-generic h3 {
