@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700|Merriweather:400bold,400,700italic,700);
 
 /**  Basic Page CSS **/
 body{
@@ -32,14 +32,14 @@ header .navbar-default .navbar-nav a {
 }
 
 header .navbar-default .navbar-nav a:hover {
-  color: #EEC856;
+  color: #E15D5F;
 }
 
 header .navbar-default .navbar-nav .active a {
   font-weight: 700;
-  color: #EEC856;
+  color: #E15D5F;
   background: transparent;
-  border-bottom: 4px solid #EEC856;
+  border-bottom: 4px solid #E15D5F;
   text-shadow: none;
 }
 
@@ -61,16 +61,16 @@ header .navbar-brand {
 header .navbar-brand h1 {
   color: #EEC856;
   margin: 0;
+  font-family: "Merriweather";  
   font-size: 1.8em;
-  font-weight: 400;
+  font-weight: 700;
   padding-left: 75px;
 }
 
 header .navbar-brand span.subhead {
-  display: block;
-  font-family: "Roboto Slab", serif;
+  display: block;  
   font-size: .6em;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 /**  Navbar Toggle **/
@@ -86,6 +86,12 @@ header .navbar-default .navbar-toggle .icon-bar {
 and (max-width: 768px) {
   header .navbar-collapse.in {
     background-color: rgba(0,0,0, .5);
+  }
+  #carousel-example-generic h2 {
+    font-size:12px
+  }
+  #carousel-example-generic{
+    font-size:12px
   }
 }
 
@@ -158,7 +164,7 @@ header .inbody .navbar-brand span.subhead {
 #featured .item {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; 
   width: 100%;
   height: 100%;
 }
@@ -176,9 +182,9 @@ header .inbody .navbar-brand span.subhead {
 
 /**  Page -- Bio **/
 #bio {
-  background-color: #E4D29D;
-  background-image: linear-gradient(to bottom, #EEF08A, #819A2D);
-  border-top: 20px solid rgba(238, 200, 86, .5);
+  background-color: #5bba37; 
+  background-image: linear-gradient(to bottom,  #5bba37, #6ad382); 
+  /** border-top: 20px solid #ee7c56; **/
 }
 
 /**  Page -- Skills **/
@@ -240,8 +246,8 @@ and (max-width: 768px) {
 /**  Page -- Highlights **/
 
 #Highlights {
-  background-color: #E4D29D;
-  background-image: linear-gradient(to bottom, #E4D29D, #CDAE50);
+  background-color: #eef08a;
+  background-image: linear-gradient(to bottom, #eef08a, #CDAE50);
 }
 
 .high {
@@ -354,7 +360,9 @@ and (max-width: 768px) {
 #Projects .quote:hover .intro::after {
   content: '';
 }
+ 
 
+ 
 /**  Footer **/
 
 footer {
