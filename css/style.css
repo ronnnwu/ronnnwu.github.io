@@ -179,7 +179,7 @@ header .inbody .navbar-brand span.subhead {
 #bio {
   background-color: #5bba37; 
   background-image: linear-gradient(to bottom,  #5bba37, #6ad382); 
-  /** border-top: 20px solid #ee7c56; **/
+  border-top: 10px solid #000011; 
 }
 
 /**  Page -- Skills **/
